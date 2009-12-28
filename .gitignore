@@ -1,0 +1,7 @@
+auto-save-list
+*.elc
+url/cookies
+tramp
+\#*
+*~
+*.cache
