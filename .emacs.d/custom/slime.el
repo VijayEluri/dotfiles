@@ -5,8 +5,8 @@
 ;;(require 'slime-autoloads)
 (slime-setup)
 
-(setq slime-lisp-implementations '((cmucl ("cmucl" "-quiet"))
-				   (sbcl ("/usr/bin/sbcl") :coding-system utf-8-unix)))
+;;(setq slime-lisp-implementations '((cmucl ("cmucl" "-quiet"))
+;;				   (sbcl ("/usr/bin/sbcl") :coding-system utf-8-unix)))
 
 (setq auto-mode-alist
       (append '(("\\.lisp$" . lisp-mode)
