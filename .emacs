@@ -46,7 +46,7 @@
 
 (server-start)
 
-(setq load-path (cons "~/emacs.d" load-path))
+(setq load-path (cons "~/.emacs.d" load-path))
 (add-to-list 'load-path "/usr/share/emacs/site-lisp")
 
 (setq shell-file-name "bash")
