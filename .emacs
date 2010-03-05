@@ -59,8 +59,6 @@
 (setq explicit-sh-args '("-login" "-i"))
 
 (setq tramp-default-method "ssh")
-;; C-x C-f /host:/path/to/file
-;; C-x C-f /ssh:user@host:/path/to/file
 
 (setq browse-url-browser-function 'w3m-browse-url)
 (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
