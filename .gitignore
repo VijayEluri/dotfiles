@@ -1,7 +1,8 @@
 auto-save-list
-*.elc
-url/cookies
+.backups
 tramp
+url/cookies
 \#*
 *~
 *.cache
+*.elc
