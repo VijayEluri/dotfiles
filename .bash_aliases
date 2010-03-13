@@ -20,7 +20,7 @@ alias emacs="emacs -nw"
 alias xemacs="emacs -fn 6x13"
 alias clojure="java -server -cp /path/to/jline.jar:/path/to/clojure.jar jline.ConsoleRunner clojure.lang.Repl"
 
-alias ncplayer="netcat aleph0 2020 | mplayer -cache 204800 -idx -"
+alias ncplayer="netcat host 2020 | mplayer -cache 204800 -idx -"
 alias cmplayer="mplayer -cache 200000 -idx -sws 0 -zoom -fs"
 alias mntmedia="sshfs user@host:/mnt /media"
 
