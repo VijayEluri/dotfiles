@@ -28,10 +28,10 @@ export LD_LIBRARY_PATH=$HOME/local/lib:$PATH
 #SVN_EDITOR="emacsclient"
 #export SVNROOT SVN_EDITOR
 
-if [ -f $HOME/.Xresources]; then
+if [ -f $HOME/.Xresources ]; then
     /usr/bin/xrdb -merge $HOME/.Xresources
 fi
 
-if [ -f $HOME/.xmodmap]; then
+if [ -f $HOME/.xmodmap ]; then
     /usr/bin/xmodmap $HOME/.xmodmap
 fi
