@@ -2,10 +2,9 @@
 
 set -o emacs
 
-export PS1="\u@\h:\w $ "
+export PS1="[\!] \u@\h:\w $ "
 export SHELL=/bin/bash
 export EDITOR=emacsclient
-export LESS_OPEN="| tar --to-stdout -xfz %s"
 
 ANDROID_HOME=$HOME/local/android-sdk
 ANT_HOME=$HOME/local/apache-ant
@@ -15,21 +14,21 @@ MAVEN_HOME=$HOME/local/apache-maven
 
 export ANDROID_HOME ANT_HOME CATALINA_HOME JAVA_HOME MAVEN_HOME
 
-export PATH=$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+export PATH=$HOME/local/bin:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
-export PATH=$HOME/local/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/local/lib:$PATH
+#export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
+
 #export MANPATH=$HOME/local/doc/man:$MANPATH
 
-#CVSROOT=":pserver:user@host:/cvsroot/trunk"
+#CVSROOT=":pserver:phua@aleph0:/cvsroot/trunk"
 #CVS_RSH="ssh"
 #export CVSROOT CVS_RSH
-#SVNROOT="svn://user@host/trunk"
+#SVNROOT="svn://phua@aleph0/trunk"
 #SVN_EDITOR="emacsclient"
 #export SVNROOT SVN_EDITOR
 
-if [ -f $HOME/.Xresources ]; then
-    /usr/bin/xrdb -merge $HOME/.Xresources
+if [ -f $HOME/.Xdefaults ]; then
+    /usr/bin/xrdb -merge $HOME/.Xdefaults
 fi
 
 if [ -f $HOME/.xmodmap ]; then
