@@ -1,0 +1,28 @@
+urxvt*background:black
+urxvt*boldItalicFont:9x15bold,xft:Bitstream Vera Sans Mono
+urxvt*buffered:true
+urxvt*depth:32
+urxvt*fadeColor:black
+urxvt*fading:25
+urxvt*font:xft:Bitstream Vera Sans Mono:pixelsize=15
+urxvt*foreground:white
+urxvt*geometry:80x24
+urxvt*jumpScroll:true
+urxvt*loginShell:true
+urxvt*saveLines:65535
+urxvt*scrollBar:true
+urxvt*scrollBar_right:true
+urxvt*scrollstyle:plain
+urxvt*shading:40
+urxvt*skipScroll:true
+urxvt*transparent:false
+urxvt*tintColor:blue
+urxvt*termName:URxvt
+urxvt*urlLauncher:/usr/bin/links
+
+xft*antialias:1
+
+!emacs*font:Bitstream Vera Sans Mono
+emacs*font:DejaVu Sans Mono
+emacs*fontBackend:xft,x
+emacs*fullscreen:fullboth
