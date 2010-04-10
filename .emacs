@@ -2,6 +2,9 @@
 ;; C-u 0 M-x byte-recompile-directory ~/.emacs.d
 
 ;;(if (string-match emacs-version "GNU Emacs\\|XEmacs") ...)
+;;(if (or (eq system-type 'gnu/linux) (eq system-type 'cygwin)) ...)
+
+(require 'cl)
 
 (setq debug-on-error t)
 
@@ -20,20 +23,35 @@
 (global-set-key (kbd "\e <up>") 'windmove-up)
 (global-set-key (kbd "\e <right>") 'windmove-right)
 
+;;(xterm-mouse-mode nil)
+;;(setq require-final-newline t)
+;;(setq scroll-step 1)
+;;(setq display-time-24hr-format t)
+;;(display-time)
+
 (fset 'yes-or-no-p 'y-or-n-p)
-(defalias 'list-buffers 'ibuffer)
 
 (setq confirm-kill-emacs
       (lambda (e)
 	(y-or-n-p-with-timeout
-	 "Are you sure you want to exit emacs?" 5 t)))
+	 "Are you sure you want to exit emacs?" 10 t)))
 
-(server-start)
+(setq user-load-path (expand-file-name "~/.emacs.d"))
+(setq custom-load-path (concat user-load-path "/custom"))
+(setq local-load-path (concat user-load-path "/site-lisp"))
+;;(setq load-path (cons user-load-path load-path))
+(add-to-list 'load-path user-load-path)
+(add-to-list 'load-path custom-load-path)
+(add-to-list 'load-path local-load-path)
+(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp")
+(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp/emacs-goodies-el")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el")
 
-(setq custom-file "~/.emacs.d/custom.el")
+(setq custom-file (concat user-load-path "/custom.el"))
 (load custom-file 'noerror)
 
-(add-to-list 'backup-directory-alist (cons "." "~/.emacs.d/.backups/"))
+(add-to-list 'backup-directory-alist (cons "." (concat user-load-path "/.backups/")))
 (setq tramp-backup-directory-alist backup-directory-alist)
 
 (line-number-mode t)
@@ -51,16 +69,12 @@
 ;;(setq default-major-mode 'text-mode)
 ;;(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
-(setq user-load-path (expand-file-name "~/.emacs.d"))
-(setq load-path (cons user-load-path load-path))
-(setq custom-load-path (concat user-load-path "/custom"))
-(add-to-list 'load-path custom-load-path)
-(setq local-load-path (concat user-load-path "/site-lisp"))
-(add-to-list 'load-path local-load-path)
-(add-to-list 'load-path "/usr/share/emacs/site-lisp")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el")
-(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp")
-(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp/emacs-goodies-el")
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(setq color-theme-is-global t)
+;;(color-theme-hober)
+
+(defalias 'list-buffers 'ibuffer)
 
 (require 'ido)
 (ido-mode t)
@@ -70,10 +84,11 @@
 (require 'anything)
 (require 'anything-config)
 
-(setq shell-file-name "bash")
+(setq shell-file-name "/bin/bash")
 (setq shell-command-switch "-c")
 (setq explicit-shell-file-name shell-file-name)
 (setenv "SHELL" shell-file-name)
+(setenv "ESHELL" shell-file-name)
 (setq explicit-sh-args '("-login" "-i"))
 
 (setq tramp-default-method "ssh")
@@ -99,11 +114,12 @@
 ;;(setq ess-ask-for-ess-directory nil
 ;;      ess-directory "~/development/r/projects/")
 
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(setq color-theme-is-global t)
-;;(color-theme-hober)
+;;(load "nxhtml/autostart.el")
 
-(require 'cl)
+;;(load "js2-mode")
 
 (load "functions")
+
+(shell)
+
+(server-start)
