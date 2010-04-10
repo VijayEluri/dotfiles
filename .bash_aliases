@@ -1,7 +1,7 @@
 #eval `dircolors -b /etc/DIR_COLORS`
 
 alias ls="ls --color=auto"
-alias ll="ls -l"
+alias ll="ls -lh"
 alias la="ll -a"
 alias lp="la | less"
 alias lr="ls -lR"
@@ -13,15 +13,23 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias df="df -h"
+alias du="du -sh"
 alias mkdir="mkdir -p"
+alias mv="mv -i"
+alias rm="rm -i"
+#alias rm="mv $@ -t ~/.trash"
 
-alias urxvt="urxvt --loginShell --color1 Orange -depth 32 +j -tr -tint blue -sh 40 -bg black -fg white -fn xft:Bitstream Vera Sans Mono:pixelsize=15 -fb 9x15bold,xft:Bitstream Vera Sans Mono -sl 1024"
 alias emacs="emacs -nw"
 alias xemacs="emacs -fn 6x13"
-alias clojure="java -server -cp /path/to/jline.jar:/path/to/clojure.jar jline.ConsoleRunner clojure.lang.Repl"
+#alias conkeror="/path/to/conkeror/xulrunner-stub &"
 
-alias ncplayer="netcat host 2020 | mplayer -cache 204800 -idx -"
-alias cmplayer="mplayer -cache 200000 -idx -sws 0 -zoom -fs"
-alias mntmedia="sshfs user@host:/mnt /media"
+#alias bsh="java -cp /path/to/bsh.jar bsh.Interpreter"
+#alias clojure="java -server -cp /path/to/jline.jar:/path/to/clojure.jar jline.ConsoleRunner clojure.lang.Repl"
+#alias rhino="java -cp /path/to/rhino/js.jar org.mozilla.javascript.tools.shell.Main"
+#alias rhino="java -jar /path/to/rhino/js.jar"
 
+alias ncplayer="netcat aleph0 2020 | mplayer -cache 204800 -idx -"
+alias cmplayer="mplayer -cache 204800 -idx -sws 0 -zoom -fs"
+alias mntmedia="sshfs phua@aleph0:/mnt/media ~/aleph0"
 ncstreamer () { cat $1 | nc -l -p 2020; }
