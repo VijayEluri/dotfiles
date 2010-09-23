@@ -1,18 +1,18 @@
 ;; M-x byte-compile ~/.emacs
 ;; C-u 0 M-x byte-recompile-directory ~/.emacs.d
 
-;;(if (string-match emacs-version "GNU Emacs\\|XEmacs") ...)
-;;(if (or (eq system-type 'gnu/linux) (eq system-type 'cygwin)) ...)
-
 (require 'cl)
 
 (setq debug-on-error t)
 
 (setq inhibit-startup-message t)
 
-(when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;;(menu-bar-mode nil)
+(tool-bar-mode nil)
+(scroll-bar-mode nil)
+
+(global-set-key "\C-xg" 'goto-line)
+(global-set-key "\C-x\C-g" 'goto-line)
 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
@@ -23,30 +23,29 @@
 (global-set-key (kbd "\e <up>") 'windmove-up)
 (global-set-key (kbd "\e <right>") 'windmove-right)
 
-;;(xterm-mouse-mode nil)
 ;;(setq require-final-newline t)
 ;;(setq scroll-step 1)
-;;(setq display-time-24hr-format t)
-;;(display-time)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq confirm-kill-emacs
       (lambda (e)
 	(y-or-n-p-with-timeout
-	 "Are you sure you want to exit emacs?" 10 t)))
+	 "Are you sure you want to exit emacs?" 5 t)))
+
+(require 'desktop)
+(desktop-save-mode 1)
+;;(add-hook 'auto-save-hook (lambda () (desktop-save-in-desktop-dir)))
+;;(desktop-read)
 
 (setq user-load-path (expand-file-name "~/.emacs.d"))
-(setq custom-load-path (concat user-load-path "/custom"))
-(setq local-load-path (concat user-load-path "/site-lisp"))
-;;(setq load-path (cons user-load-path load-path))
 (add-to-list 'load-path user-load-path)
+(setq custom-load-path (concat user-load-path "/custom"))
 (add-to-list 'load-path custom-load-path)
+(setq local-load-path (concat user-load-path "/site-lisp"))
 (add-to-list 'load-path local-load-path)
-(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp")
-(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp/emacs-goodies-el")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el")
+(setq global-load-path "/usr/share/emacs/site-lisp")
+(add-to-list 'load-path global-load-path)
 
 (setq custom-file (concat user-load-path "/custom.el"))
 (load custom-file 'noerror)
@@ -68,6 +67,7 @@
 
 ;;(setq default-major-mode 'text-mode)
 ;;(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;;(add-hook 'text-mode-hook (lambda () (refill-mode t)))
 
 ;;(require 'color-theme)
 ;;(color-theme-initialize)
@@ -75,14 +75,11 @@
 ;;(color-theme-hober)
 
 (defalias 'list-buffers 'ibuffer)
+(iswitchb-mode t)
 
 (require 'ido)
 (ido-mode t)
 (setq ido-enable-flex-matching t)
-
-(add-to-list 'load-path (concat local-load-path "/anything"))
-(require 'anything)
-(require 'anything-config)
 
 (setq shell-file-name "/bin/bash")
 (setq shell-command-switch "-c")
@@ -102,7 +99,25 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
-;;(add-hook 'org-mode-hook 'turn-on-font-lock)
+
+;;(add-to-list 'load-path (concat local-load-path "/anything"))
+;;(require 'anything)
+;;(require 'anything-config)
+
+(add-to-list 'load-path (concat local-load-path "/company"))
+(autoload 'company-mode "company" nil t)
+
+(add-to-list 'load-path (concat local-load-path "/auto-complete"))
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (concat local-load-path "/auto-complete/dictionary"))
+(ac-config-default)
+
+(add-to-list 'load-path (concat local-load-path "/yasnippet"))
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (concat local-load-path "/yasnippet/snippets"))
+
+;;(global-semantic-idle-tag-highlight-mode 1)
 
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
@@ -114,12 +129,13 @@
 ;;(setq ess-ask-for-ess-directory nil
 ;;      ess-directory "~/development/r/projects/")
 
-;;(load "nxhtml/autostart.el")
-
-;;(load "js2-mode")
-
 (load "functions")
+(load "jderc")
+;;(load "pyrc")
+(load "emmsrc")
+;;(load "nxhtml/autostart.el")
+;;(load "js2-mode")
 
 (shell)
 
-(server-start)
+;;(server-start)

@@ -1,24 +1,25 @@
-urxvt*background:black
-urxvt*boldItalicFont:9x15bold,xft:Bitstream Vera Sans Mono
-urxvt*buffered:true
-urxvt*depth:32
-urxvt*fadeColor:black
-urxvt*fading:25
-urxvt*font:xft:Bitstream Vera Sans Mono:pixelsize=15
-urxvt*foreground:white
-urxvt*geometry:80x24
-urxvt*jumpScroll:true
-urxvt*loginShell:true
-urxvt*saveLines:65535
-urxvt*scrollBar:true
-urxvt*scrollBar_right:true
-urxvt*scrollstyle:plain
-urxvt*shading:40
-urxvt*skipScroll:true
-urxvt*transparent:false
-urxvt*tintColor:blue
-urxvt*termName:URxvt
-urxvt*urlLauncher:/usr/bin/links
+URxvt.geometry:80x24
+URxvt.loginShell:true
+URxvt.saveLines:8192
+URxvt.visualBell:true
+
+URxvt.background:black
+URxvt.foreground:white
+URxvt.transparent:true
+URxvt.tintColor:blue
+URxvt.shading:40
+URxvt.depth:32
+
+urxvt.font:xft:Bitstream Vera Sans Mono:autohint=true
+urxvt.boldFont:xft:Bitstream Vera Sans Mono:bold:autohint=true
+urxvt.italicFont:xft:Bitstream Vera Sans Mono:italic:autohint=true
+urxvt.boldItalicFont:xft:Bitstream Vera Sans Mono:bold:italic:autohint=true
+
+URxvt.scrollBar:true
+URxvt.jumpScroll:true
+URxvt.skipScroll:true
+URxvt.scrollstyle:plain
+URxvt.secondaryScroll:true
 
 xft*antialias:1
 
