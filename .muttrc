@@ -20,9 +20,9 @@ set forward_format="FWD: %s"
 
 # IMAP configuration
 
-set realname="Peter Hua"
-set from="Peter Hua <pehua01@gmail.com>"
-set imap_user=pehua01@gmail.com
+set realname="NAME"
+set from="EMAIL@gmail.com"
+set imap_user=EMAIL@gmail.com
 #set imap_pass=
 
 set folder=imaps://imap.gmail.com
@@ -40,7 +40,7 @@ set imap_keepalive=300
 
 # SMTP configuration
 
-set smtp_url=smtps://pehua01\@gmail.com@smtp.gmail.com:465
+set smtp_url=smtps://EMAIL\@gmail.com@smtp.gmail.com:465
 #set smtp_pass=
 
 #set ssl_starttls=yes
