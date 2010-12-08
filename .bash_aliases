@@ -3,8 +3,8 @@
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ll -a"
+alias lr="ll -R"
 alias lp="la | less"
-alias lr="ls -lR"
 
 alias tree="tree -Csu"
 
@@ -13,23 +13,19 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias mkdir="mkdir -p"
+
 alias df="df -h"
 alias du="du -sh"
-alias mkdir="mkdir -p"
-alias mv="mv -i"
-alias rm="rm -i"
-#alias rm="mv $@ -t ~/.trash"
 
 alias emacs="emacs -nw"
 alias xemacs="emacs -fn 6x13"
 #alias conkeror="/path/to/conkeror/xulrunner-stub &"
+alias crawl='wget -nv -w 15 --random-wait -k -m'
 
-#alias bsh="java -cp /path/to/bsh.jar bsh.Interpreter"
-#alias clojure="java -server -cp /path/to/jline.jar:/path/to/clojure.jar jline.ConsoleRunner clojure.lang.Repl"
-#alias rhino="java -cp /path/to/rhino/js.jar org.mozilla.javascript.tools.shell.Main"
-#alias rhino="java -jar /path/to/rhino/js.jar"
+alias bsh="java -jar /usr/share/java/bsh.jar"
 
-alias ncplayer="netcat aleph0 2020 | mplayer -cache 204800 -idx -"
 alias cmplayer="mplayer -cache 204800 -idx -sws 0 -zoom -fs"
 alias mntmedia="sshfs phua@aleph0:/mnt/media ~/aleph0"
-ncstreamer () { cat $1 | nc -l -p 2020; }
+alias ncplayer="netcat aleph0 8080 | mplayer -cache 204800 -idx -"
+ncstreamer () { cat $1 | nc -l -p 8080; }

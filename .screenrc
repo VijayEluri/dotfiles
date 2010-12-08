@@ -138,14 +138,17 @@ bind ^] paste [.]
 # screen -t local 0
 # screen -t mail 1 mutt
 # screen -t 40 2 rlogin server
-screen -t mail 1 mutt
-screen -t chat 2 finch
-screen -t web 3 TERM=xterm-256color elinks http://www.google.com
-screen -t emacs 4 emacs -nw
-#screen -t irc 5 irssi
-screen -t bash 5
-#screen -t remote 6 ssh user@remote
 screen -t root 0 su -
+screen -t emacs 1 emacs -nw
+screen -t bash 2
+#screen -t home 3 ssh aleph0 uname -a
+screen -t mail 4 mutt
+screen -t talk 5 finch
+#screen -t chat 6 irssi -c irc.freenode.net -p 6667
+screen -t web 7 elinks http://www.google.com
+#screen -t btor 8 rtorrent
+#screen -t music 9 cmus
+screen -p 0
 
 # caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
 # hardstatus alwaysignore
