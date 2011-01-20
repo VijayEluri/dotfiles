@@ -1,17 +1,17 @@
 # Local configuration
 
-#set mbox_type=Maildir
-#set folder=~/mail
-#set spoolfile=/var/spool/mail/phua
-#mailboxes =INBOX
+# set mbox_type=Maildir
+# set folder=~/mail
+# set spoolfile=/var/spool/mail/phua
+# mailboxes =INBOX
 
-#set sendmail="/usr/bin/sendmail -oi -oem"
-#set sendmail=/usr/bin/msmtp
+# set sendmail="/usr/bin/sendmail -oi -oem"
+# set sendmail=/usr/bin/msmtp
 
 set timeout=300
 set mail_check=300
 set sort=threads
-#set sort_aux=reverse-last-date-received
+# set sort_aux=reverse-last-date-received
 set mark_old=no
 set fast_reply=yes
 set include=yes
@@ -20,18 +20,18 @@ set forward_format="FWD: %s"
 
 # IMAP configuration
 
-set realname="Peter Hua"
-set from="Peter Hua <pehua01@gmail.com>"
-set imap_user=pehua01@gmail.com
-#set imap_pass=
+set realname="User Name"
+set from="User Name <user@gmail.com>"
+set imap_user=user@gmail.com
+# set imap_pass=
 
 set folder=imaps://imap.gmail.com
 set spoolfile=+INBOX
-#set mbox_type=mbox
-#set mbox="+[Gmail]/All Mail"   # [un]set move
-set record="+[Gmail]/Sent Mail" # [un]set copy
-set postponed=+[Gmail]/Drafts   # [un]set postpone
-#set trash=+[Gmail]/Trash       # requires [trash_folder_patch]
+# set mbox_type=mbox
+# set mbox="+[Gmail]/All Mail"     # [un]set move
+# set record="+[Gmail]/Sent Mail"  # [un]set copy
+set postponed=+[Gmail]/Drafts      # [un]set postpone
+# set trash=+[Gmail]/Trash         # requires [trash_folder_patch]
 
 mailboxes =INBOX
 
@@ -40,10 +40,10 @@ set imap_keepalive=300
 
 # SMTP configuration
 
-set smtp_url=smtps://pehua01\@gmail.com@smtp.gmail.com:465
-#set smtp_pass=
+set smtp_url=smtps://user\@gmail.com@smtp.gmail.com:465
+# set smtp_pass=
 
-#set ssl_starttls=yes
+# set ssl_starttls=yes
 set ssl_force_tls=yes
 
 # Options
@@ -57,10 +57,12 @@ source ~/.mutt/colors
 set alias_file=~/.mutt/aliases
 source ~/.mutt/aliases
 
-#ignore *
-#unignore Date: From: To: CC: Bcc: Subject: User-Agent: X-Mailer:
-#hdr_order Date: From: To: CC: Bcc: Subject: User-Agent: X-Mailer:
-#set index_format="%{%b %d} %-15.15L [%Z] %s"
+# ignore *
+# unignore Date: From: To: CC: Bcc: Subject: User-Agent: X-Mailer:
+# hdr_order Date: From: To: CC: Bcc: Subject: User-Agent: X-Mailer:
+# set index_format="%{%b %d} %-15.15L [%Z] %s"
+
+# Macros
 
 macro index,pager gi "<change-folder>=INBOX<enter>" "Inbox"
 macro index,pager gr "<change-folder>=[Gmail]/Sent Mail<enter>" "Sent"
