@@ -87,11 +87,12 @@ ${color lightgrey} ${top_mem name 4} ${top_mem pid 4} ${top_mem cpu 4} ${top_mem
 ${color grey}Buffers:$color $buffers Cached:$color $cached
 $hr
 ${color grey}Active Connections:
-${color grey}Inbound:$color ${tcp_portmon 1 65535 count} Outbound:$color ${tcp_portmon 1 65535 count}
 ${color grey}Hostname          Local Remote
 ${color lightgrey} ${tcp_portmon 1 65535 rhost 0} ${tcp_portmon 1 65535 lservice 0} ${tcp_portmon 1 65535 rservice 0}
 ${color lightgrey} ${tcp_portmon 1 65535 rhost 1} ${tcp_portmon 1 65535 lservice 1} ${tcp_portmon 1 65535 rservice 1}
 ${color lightgrey} ${tcp_portmon 1 65535 rhost 2} ${tcp_portmon 1 65535 lservice 2} ${tcp_portmon 1 65535 rservice 2}
 ${color lightgrey} ${tcp_portmon 1 65535 rhost 3} ${tcp_portmon 1 65535 lservice 3} ${tcp_portmon 1 65535 rservice 3}
+
+${color grey}Inbound:$color ${tcp_portmon 1 65535 count} Outbound:$color ${tcp_portmon 1 65535 count}
 $stippled_hr
 ${color grey}ACPI:$color $acpiacadapter Fan:$color $acpifan Temp:$color $acpitemp Battery:$color $battery

@@ -1,9 +1,10 @@
+*~
+\#*
 auto-save-list
 .backups
+*.cache
+*.elc
+.git
 site-lisp
 tramp
 url/cookies
-\#*
-*~
-*.cache
-*.elc

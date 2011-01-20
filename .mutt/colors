@@ -1,0 +1,15 @@
+# colors := white black green magenta blue cyan yellow red default colorx
+
+color attachment yellow default
+color hdrdefault cyan default
+color header brightcyan default "^Subject:"
+color index green default "~N|~O"
+color index brightyellow default ~F
+color index blue default ~D
+color indicator white blue
+color normal white default
+color quoted magenta default
+color quoted1 magenta default
+color search brightyellow default
+color signature blue default
+color status white blue

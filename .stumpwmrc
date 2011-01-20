@@ -3,11 +3,11 @@
    Need to have set 'Option SHMConfig' for Synaptics Touchpad
    device in xorg.conf."
   (let ((state (run-shell-command
-		"synclient -l | grep TouchpadOff | awk '{ print $3 }'" t)))
+                "synclient -l | grep TouchpadOff | awk '{ print $3 }'" t)))
     (case (string= (subseq state 0 1) "1")
       (t (shell-command "synclient TouchpadOff=0"))
       (otherwise (shell-command "synclient TouchpadOff=1")
-		 (banish-pointer)))))
+                 (banish-pointer)))))
 
 (define-key *root-map* (kbd "T") "toggle-touchpad")
 
@@ -18,8 +18,8 @@
 (banish-pointer)
 
 (defcommand firefox () ()
-	    "Start/Switchto Firefox."
-	    (run-or-raise "firefox" '(:class "Firefox")))
+            "Start/Switchto Firefox."
+            (run-or-raise "firefox" '(:class "Firefox")))
 
 (define-key *root-map* (kbd "f") "firefox")
 

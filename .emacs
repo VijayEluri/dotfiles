@@ -7,9 +7,10 @@
 
 (setq inhibit-startup-message t)
 
-;;(menu-bar-mode nil)
+;; (menu-bar-mode nil)
 (tool-bar-mode nil)
 (scroll-bar-mode nil)
+;; (xterm-mouse-mode nil)
 
 (global-set-key "\C-xg" 'goto-line)
 (global-set-key "\C-x\C-g" 'goto-line)
@@ -17,14 +18,14 @@
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
 
-;;(windmove-default-keybindings)
+;; (windmove-default-keybindings)
 (global-set-key (kbd "\e <left>") 'windmove-left)
 (global-set-key (kbd "\e <down>") 'windmove-down)
 (global-set-key (kbd "\e <up>") 'windmove-up)
 (global-set-key (kbd "\e <right>") 'windmove-right)
 
-;;(setq require-final-newline t)
-;;(setq scroll-step 1)
+;; (setq require-final-newline t)
+;; (setq scroll-step 1)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -35,8 +36,8 @@
 
 (require 'desktop)
 (desktop-save-mode 1)
-;;(add-hook 'auto-save-hook (lambda () (desktop-save-in-desktop-dir)))
-;;(desktop-read)
+;; (add-hook 'auto-save-hook (lambda () (desktop-save-in-desktop-dir)))
+;; (desktop-read)
 
 (setq user-load-path (expand-file-name "~/.emacs.d"))
 (add-to-list 'load-path user-load-path)
@@ -58,21 +59,24 @@
 (show-paren-mode t)
 (global-font-lock-mode t)
 (transient-mark-mode t)
-;;(auto-fill-mode t)
+;; (setq delete-selection-mode 1)
+;; (auto-fill-mode t)
 (abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table
   '(("alpha" "α" nil 0)
     ("Delta" "Δ" nil 0) ("delta" "δ" nil 0)
     ("Theta" "Θ" nil 0) ("theta" "θ" nil 0)))
 
-;;(setq default-major-mode 'text-mode)
-;;(add-hook 'text-mode-hook 'turn-on-auto-fill)
-;;(add-hook 'text-mode-hook (lambda () (refill-mode t)))
+(setq indent-tabs-mode nil)
 
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(setq color-theme-is-global t)
-;;(color-theme-hober)
+;; (setq default-major-mode 'text-mode)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook (lambda () (refill-mode t)))
+
+;; (require 'color-theme)
+;; (color-theme-initialize)
+;; (setq color-theme-is-global t)
+;; (color-theme-hober)
 
 (defalias 'list-buffers 'ibuffer)
 (iswitchb-mode t)
@@ -88,6 +92,8 @@
 (setenv "ESHELL" shell-file-name)
 (setq explicit-sh-args '("-login" "-i"))
 
+;; (shell)
+
 (setq tramp-default-method "ssh")
 
 (setq browse-url-browser-function 'w3m-browse-url)
@@ -100,9 +106,9 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-;;(add-to-list 'load-path (concat local-load-path "/anything"))
-;;(require 'anything)
-;;(require 'anything-config)
+;; (add-to-list 'load-path (concat local-load-path "/anything"))
+;; (require 'anything)
+;; (require 'anything-config)
 
 (add-to-list 'load-path (concat local-load-path "/company"))
 (autoload 'company-mode "company" nil t)
@@ -117,7 +123,7 @@
 (yas/initialize)
 (yas/load-directory (concat local-load-path "/yasnippet/snippets"))
 
-;;(global-semantic-idle-tag-highlight-mode 1)
+;; (global-semantic-idle-tag-highlight-mode 1)
 
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
@@ -125,17 +131,23 @@
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 
-;;(require 'ess-site)
-;;(setq ess-ask-for-ess-directory nil
-;;      ess-directory "~/development/r/projects/")
+;; (require 'ess-site)
+;; (setq ess-ask-for-ess-directory nil
+;;       ess-directory "~/development/r/projects/")
 
 (load "functions")
-(load "jderc")
-;;(load "pyrc")
+(load "elrc")
 (load "emmsrc")
-;;(load "nxhtml/autostart.el")
-;;(load "js2-mode")
+(load "javarc")
+(load "lisprc")
+(load "maxrc")
+(load "mrc")
+;; (load "pyrc")
+;; (load "nxhtml/autostart.el")
+;; (load "js2-mode")
+
+(find-file "~/")
 
 (shell)
 
-;;(server-start)
+(server-start)
