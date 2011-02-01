@@ -1,3 +1,5 @@
+(global-set-key "\C-xg" 'goto-line)
+
 (defun google-region (start end)
   (interactive "r")
   (browse-url (concat "http://www.google.com/search?q=" (buffer-substring start end))))
@@ -19,7 +21,6 @@
 (defun format-code (start end)
   (interactive "r")
   (save-excursion
-    ;; (mark-whole-buffer)
     (indent-region start end)
     (delete-trailing-whitespace)
     (delete-blank-lines)
@@ -30,8 +31,9 @@
 (defun generate-tag-file (directory)
   "Generate tag file."
   (interactive "DDirectory name: ")
-  ;; (shell-command (format "ctags -fs %s/TAGS -e -R %s" directory directory)
-  (eshell-command (format "find %s -type f -name \\*.java | xargs etags --language-force=Java" directory)))
+  ;; (shell-command (format "ctags -fs %s/TAGS -e -R %s" directory directory))
+  ;; (eshell-command (format "find %s -type f -name \\*.java | xargs etags --language-force=Java" directory))
+  (eshell-command (format "%s/jdee/lisp/jtags %s" local-load-path directory)))
 
 (defun open-class-file (class-file jar-file)
   ;; e.g. unzip -p ./lib/jar-file.jar class-file.class
