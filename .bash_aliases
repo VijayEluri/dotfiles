@@ -22,6 +22,7 @@ alias du="du -sh"
 alias emacs="emacs -nw"
 alias xemacs="emacs -fn 6x13"
 # alias conkeror="/path/to/conkeror/xulrunner-stub &"
+# alias etags="/usr/bin/etags.emacs"
 
 # alias crawl="wget -nv -w 15 --random-wait -k -m"
 # alias curl="curl"

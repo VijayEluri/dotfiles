@@ -8,7 +8,8 @@ export ANDROID_HOME ANT_HOME CATALINA_HOME JAVA_HOME MAVEN_HOME
 export PATH=$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
 export EDITOR=emacsclient
-export MAIL=/var/spool/mail/phua
+# export MAIL=/var/spool/mail/phua
+# export MAIL=$HOME/Mail
 export PAGER=less
 # export TERM=rxvt-unicode
 # export TERM=screen

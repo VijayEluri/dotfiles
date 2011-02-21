@@ -5,6 +5,7 @@ auto-save-list
 *.cache
 *.elc
 .git
+.gitconfig
 site-lisp
 tramp
 url/cookies
