@@ -69,7 +69,7 @@
 (setq explicit-shell-file-name shell-file-name)
 (setenv "SHELL" shell-file-name)
 (setenv "ESHELL" shell-file-name)
-(setq explicit-sh-args '("-login" "-i"))
+(setq explicit-sh-args '("--login" "-i"))
 
 (setq tramp-default-method "ssh")
 
@@ -110,7 +110,9 @@
 ;; (load "cpprc")
 (load "elrc")
 ;; (load "emmsrc")
-(load "javarc")
+(load "hsrc")
+(load "eclimrc")
+;; (load "javarc")
 ;; (load "jsrc")
 (load "lisprc")
 ;; (load "maxrc")

@@ -1,8 +1,12 @@
 # Local configuration
 
-# set mbox_type=Maildir
-# set folder=~/mail
+# set folder=~/Mail
 # set spoolfile=/var/spool/mail/phua
+# set mbox_type=Maildir
+# set mbox=+received
+# set record=+sent
+# set postponed=+postponed
+
 # mailboxes =INBOX
 
 # set sendmail="/usr/bin/sendmail -oi -oem"
@@ -20,9 +24,9 @@ set forward_format="FWD: %s"
 
 # IMAP configuration
 
-set realname="User Name"
-set from="User Name <user@gmail.com>"
-set imap_user=user@gmail.com
+set realname="USER NAME"
+set from="USER NAME <USER@gmail.com>"
+set imap_user=USER@gmail.com
 # set imap_pass=
 
 set folder=imaps://imap.gmail.com
@@ -37,14 +41,21 @@ mailboxes =INBOX
 
 set imap_passive=no
 set imap_keepalive=300
+set imap_check_subscribed
 
 # SMTP configuration
 
-set smtp_url=smtps://user\@gmail.com@smtp.gmail.com:465
+set smtp_url=smtps://USER\@gmail.com@smtp.gmail.com:465
 # set smtp_pass=
 
-# set ssl_starttls=yes
+set ssl_starttls=yes
 set ssl_force_tls=yes
+
+# Multiple IMAP accounts
+
+# account-hook . 'unset preconnect imap_user imap_pass imap_authenticators; set ssl_starttls=ask-yes'
+# source 'cat ~/.mutt/accounts/*|'
+# switch with cimap://home or cimap://work
 
 # Options
 
@@ -55,7 +66,12 @@ set certificate_file=~/.mutt/certificates
 source ~/.mutt/colors
 
 set alias_file=~/.mutt/aliases
-source ~/.mutt/aliases
+set sort_alias=alias
+set reverse_alias=yes
+source $alias_file
+
+# set query_command="abook --mutt-query '%s'"
+# set query_command="~/.mutt/scripts/mutt-ldap '%s'"
 
 # ignore *
 # unignore Date: From: To: CC: Bcc: Subject: User-Agent: X-Mailer:
@@ -65,7 +81,7 @@ source ~/.mutt/aliases
 # Macros
 
 macro index,pager gi "<change-folder>=INBOX<enter>" "Inbox"
-macro index,pager gr "<change-folder>=[Gmail]/Sent Mail<enter>" "Sent"
+macro index,pager gr "<change-folder>=[Gmail]/Sent<quote-char> Mail<enter>" "Sent"
 macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Starred"
 macro index,pager gp "<change-folder>=[Gmail]/Drafts<enter>" "Drafts"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "All Mail"
+macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "All Mail"

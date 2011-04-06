@@ -1,4 +1,5 @@
 -- $ xmonad --recompile
+-- M-q
 
 import XMonad
 -- import XMonad.Config.Desktop
@@ -28,7 +29,7 @@ main = do
     modMask    = mod4Mask
     -- , workspaces    = ["1","2","3","4","5","6","7","8","9"]
     } `additionalKeys`
-    [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock") -- M-S-z
+    [ ((mod4Mask .|. shiftMask, xK_z), spawn "gnome-screensaver-command -l") -- M-S-z
     , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s") -- C-PrtSc
     , ((0, xK_Print), spawn "scrot")                         -- PrtSc
     -- , ("M-<Left>", prevWS)

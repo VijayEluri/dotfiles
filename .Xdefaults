@@ -14,7 +14,6 @@ urxvt.font:xft:Bitstream Vera Sans Mono:autohint=true
 urxvt.boldFont:xft:Bitstream Vera Sans Mono:bold:autohint=true
 urxvt.italicFont:xft:Bitstream Vera Sans Mono:italic:autohint=true
 urxvt.boldItalicFont:xft:Bitstream Vera Sans Mono:bold:italic:autohint=true
-urxvt*cursorUnderline:true	! xorg-server-1.9.3.901-1 work around
 
 URxvt.scrollBar:true
 URxvt.jumpScroll:true
