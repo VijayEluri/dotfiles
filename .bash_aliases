@@ -1,4 +1,5 @@
 # eval `dircolors -b /etc/DIR_COLORS`
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

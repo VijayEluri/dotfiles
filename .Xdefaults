@@ -23,6 +23,10 @@ URxvt.secondaryScroll:true
 
 xft*antialias:1
 
+dzen2.font:xft:Bitstream Vera Sans Mono
+dzen2.foreground:blue
+dzen2.background:black
+
 emacs*font:DejaVu Sans Mono
 emacs*fontBackend:xft,x
 emacs*fullscreen:fullboth

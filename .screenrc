@@ -140,7 +140,7 @@ bind ^] paste [.]
 # screen -t 40 2 rlogin server
 
 screen -t root 0 su -
-screen -t zsh 1
+screen -t shell 1
 screen -t emacs 2 emacs -nw
 screen -t vim 3 vim
 screen -t mail 4 mutt
