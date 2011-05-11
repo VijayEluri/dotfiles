@@ -6,6 +6,4 @@
 ;;       ess-directory "~/development/r/workspace")
 
 ;; M-x S
-;;
-;; Inferior ESS
-;; M-x ?    ess-list-object-completions
+;; TAB / M-x ?

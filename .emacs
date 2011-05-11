@@ -7,7 +7,7 @@
 
 (setq inhibit-startup-message t)
 
-;; (menu-bar-mode nil)
+(menu-bar-mode nil)
 (tool-bar-mode nil)
 (scroll-bar-mode nil)
 
@@ -20,8 +20,11 @@
 ;; (auto-fill-mode t)
 (abbrev-mode t)
 
+(setq tab-width 4)
 (setq indent-tabs-mode nil)
 (setq require-final-newline t)
+
+;; (setq x-select-enable-clipboard t)
 
 ;; (setq default-major-mode 'text-mode)
 ;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
@@ -41,10 +44,10 @@
 (global-set-key "\C-c\C-m" 'execute-extended-command)
 
 ;; (windmove-default-keybindings)
-(global-set-key (kbd "\e <left>") 'windmove-left)
-(global-set-key (kbd "\e <down>") 'windmove-down)
-(global-set-key (kbd "\e <up>") 'windmove-up)
-(global-set-key (kbd "\e <right>") 'windmove-right)
+(global-set-key (kbd "<M-left>") 'windmove-left)
+(global-set-key (kbd "<M-down>") 'windmove-down)
+(global-set-key (kbd "<M-up>") 'windmove-up)
+(global-set-key (kbd "<M-right>") 'windmove-right)
 
 (add-to-list 'load-path (setq user-load-path (expand-file-name "~/.emacs.d")))
 (add-to-list 'load-path (setq custom-load-path (concat user-load-path "/custom")))
@@ -112,13 +115,13 @@
 ;; (load "emmsrc")
 (load "hsrc")
 (load "eclimrc")
-;; (load "javarc")
+;; (load "jderc")
 ;; (load "jsrc")
 (load "lisprc")
 ;; (load "maxrc")
-;; (load "mrc")
+(load "mrc")
 ;; (load "pyrc")
-;; (load "rrc")
+(load "rrc")
 ;; (load "sqlrc")
 (load "texrc")
 ;; (load "xmlrc")
@@ -127,4 +130,5 @@
 
 (dired "~")
 
-(server-start)
+(require 'server)
+(unless (server-running-p) (server-start))
