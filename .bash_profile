@@ -2,16 +2,17 @@
 
 set -o emacs
 
-ANDROID_HOME=$HOME/local/android-sdk
+ANDROID_HOME=$HOME/usr/local/android-sdk
 ANT_HOME=/usr/share/java/apache-ant
 CATALINA_HOME=/usr/share/java/apache-tomcat
 ECLIPSE_HOME=$HOME/usr/local/eclipse
 ECLIM_HOME=$ECLIPSE_HOME/plugins/org.eclim_1.6.2
 JAVA_HOME=/opt/java
 MAVEN_HOME=/opt/maven
+PYTHONPATH=$HOME/usr/local/lib/python3.2/site-packages
 
-export ANDROID_HOME ANT_HOME CATALINA_HOME ECLIPSE_HOME ECLIM_HOME JAVA_HOME MAVEN_HOME
-export PATH=$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$ECLIM_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+export ANDROID_HOME ANT_HOME CATALINA_HOME ECLIPSE_HOME ECLIM_HOME JAVA_HOME MAVEN_HOME PYTHONPATH
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$ECLIM_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
 export EDITOR=emacsclient
 export HISTCONTROL=ignoreboth
