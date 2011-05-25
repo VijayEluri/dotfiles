@@ -20,9 +20,9 @@
 ;; M-x pymacs-load os
 ;; M-: (os-getcwd)
 
-;; (require 'pymacs)
-;; (pymacs-load "ropemacs" "rope-")
-;; (setq ropemacs-confirm-saving nil)
+(require 'pymacs)
+(pymacs-load "ropemacs" "rope-" t)
+(setq ropemacs-confirm-saving nil)
 ;; (setq ropemacs-enable-autoimport t)
 ;; (setq ropemacs-autoimport-modules '("os", "shutil"))
 ;; (setq ropemacs-enable-shortcuts nil)
