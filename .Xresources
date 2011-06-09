@@ -1,1 +1,1 @@
-ln -sf .Xdefaults .Xresources
+# ln -sf .Xdefaults .Xresources

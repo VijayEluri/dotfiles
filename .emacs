@@ -24,6 +24,9 @@
 (setq indent-tabs-mode nil)
 (setq require-final-newline t)
 
+(set-background-color "black")
+(set-foreground-color "white")
+(set-cursor-color "white")
 ;; (setq x-select-enable-clipboard t)
 
 ;; (setq default-major-mode 'text-mode)
@@ -120,7 +123,7 @@
 (load "lisprc")
 ;; (load "maxrc")
 (load "mrc")
-;; (load "pyrc")
+(load "pyrc")
 (load "rrc")
 ;; (load "sqlrc")
 (load "texrc")

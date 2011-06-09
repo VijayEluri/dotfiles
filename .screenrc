@@ -141,11 +141,11 @@ bind ^] paste [.]
 
 screen -t root 0 su -
 screen -t shell 1
-screen -t emacs 2 emacs -nw
+screen -t emacs 2 emacs --debug-init -nw
 screen -t vim 3 vim
 screen -t mail 4 mutt
 screen -t talk 5 finch
-# screen -t chat 6 irssi -c irc.freenode.net -p 6667
+screen -t chat 6 irssi -c irc.freenode.net -p 6667
 screen -t web 7 elinks http://www.google.com
 # screen -t home 8 ssh phua@aleph0 screen -x
 # screen -t btor 9 rtorrent

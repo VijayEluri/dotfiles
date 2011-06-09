@@ -5,7 +5,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# ls [-dilRs]
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ll -a"
@@ -19,12 +18,12 @@ alias mkdir="mkdir -p"
 alias df="df -h"
 alias du="du -sh"
 
-alias emacs="emacs -nw"
-alias xemacs="emacs -fn 6x13"
+alias emacs="emacs --debug-init -nw"
 # alias etags="/usr/bin/etags.emacs"
-# alias conkeror="/path/to/conkeror/xulrunner-stub &"
 
+alias rash="ssh -N -f -q shellrsa;ssh phua-66004"
 # alias crawl="wget -nv -w 15 --random-wait -k -m"
+# alias wpdf="wget -r -l1 --no-parent -A.pdf $1"
 # alias curl="curl"
 
 alias fics="xboard -ics -icshost freechess.org"

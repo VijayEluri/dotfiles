@@ -2,5 +2,6 @@
 
 loadplugins '\.(js|penta)$'
 group user
+" set guioptions=
 
 " vim: set ft=pentadactyl:

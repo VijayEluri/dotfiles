@@ -1,32 +1,54 @@
-URxvt.geometry:80x24
-URxvt.loginShell:true
-URxvt.saveLines:8192
-URxvt.visualBell:true
+Xft.antialias:True
+! Xft.dpi:96
+Xft.hinting:True
+Xft.hintstyle:hintslight
+Xft.rgba:rgb
 
-URxvt.background:black
-URxvt.foreground:white
-URxvt.transparent:true
-URxvt.tintColor:blue
-URxvt.shading:40
-URxvt.depth:32
+URxvt*buffered:True
+URxvt*depth:32
+URxvt*geometry:80x24
+URxvt*loginShell:True
+URxvt*saveLines:8192
+URxvt*urgentOnBell:True
+URxvt*visualBell:False
 
-urxvt.font:xft:Bitstream Vera Sans Mono:autohint=true
-urxvt.boldFont:xft:Bitstream Vera Sans Mono:bold:autohint=true
-urxvt.italicFont:xft:Bitstream Vera Sans Mono:italic:autohint=true
-urxvt.boldItalicFont:xft:Bitstream Vera Sans Mono:bold:italic:autohint=true
+URxvt*background:rgba:0000/0000/0000/cccc
+URxvt*foreground:white
+URxvt*transparent:True
+URxvt*fading:50
+URxvt*fadeColor:black
+URxvt*tintColor:blue
+URxvt*shading:40
 
-URxvt.scrollBar:true
-URxvt.jumpScroll:true
-URxvt.skipScroll:true
-URxvt.scrollstyle:plain
-URxvt.secondaryScroll:true
+! /usr/share/fonts/.../fonts.alias
+URxvt*font:xft:Bitstream Vera Sans Mono
+URxvt*boldFont:xft:Bitstream Vera Sans Mono:bold
+URxvt*italicFont:xft:Bitstream Vera Sans Mono:italic
+URxvt*boldItalicFont:xft:Bitstream Vera Sans Mono:bold:italic
 
-xft*antialias:1
+URxvt*scrollBar:False
+URxvt*scrollstyle:plain
+URxvt*jumpScroll:True
+URxvt*skipScroll:True
+URxvt*scrollTtyOutput:False
+URxvt*scrollWithBuffer:True
+URxvt*scrollTtyKeypress:True
 
-dzen2.font:xft:Bitstream Vera Sans Mono
-dzen2.foreground:blue
-dzen2.background:black
+! autocutsel xsel clipboard
+! URxvt.perl-ext-common:default,clipboard
 
-emacs*font:DejaVu Sans Mono
-emacs*fontBackend:xft,x
-emacs*fullscreen:fullboth
+! urxvt-url-select
+URxvt.perl-ext:default,url-select
+URxvt.keysym.M-u:perl:url-select:select_next
+URxvt.urlLauncher:/usr/bin/firefox
+URxvt.underlineURLs:True
+
+Emacs*background:black
+Emacs*foreground:white
+Emacs*font:DejaVu Sans Mono
+Emacs*fontBackend:xft,x
+Emacs*fullscreen:fullboth
+
+dzen2*font:xft:Bitstream Vera Sans Mono
+dzen2*foreground:blue
+dzen2*background:black

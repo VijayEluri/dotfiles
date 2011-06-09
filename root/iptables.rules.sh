@@ -14,6 +14,7 @@
 /usr/sbin/iptables -A INPUT -m state --state INVALID -j LOGDROP
 /usr/sbin/iptables -A INPUT -p icmp -j LOGDROP
 /usr/sbin/iptables -A INPUT -i lo -j ACCEPT
+/usr/sbin/iptables -A INPUT -s 192.168.0.3 -p udp -j ACCEPT
 /usr/sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 /usr/sbin/iptables -A INPUT -p udp --dport ntp -j ACCEPT
 /usr/sbin/iptables -A INPUT -m limit -j LOG --log-prefix "Blocked on INPUT: "
@@ -27,7 +28,7 @@
 /usr/sbin/iptables -A FORWARD -j DROP
 
 /usr/sbin/iptables -A OUTPUT -m state --state INVALID -j LOGDROP
-/usr/sbin/iptables -A OUTPUT -p icmp -j LOGDROP
+# /usr/sbin/iptables -A OUTPUT -p icmp -j LOGDROP
 /usr/sbin/iptables -A OUTPUT -o lo -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p udp -d 192.168.0.1 --dport domain -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p udp --dport ntp -j ACCEPT
@@ -40,13 +41,14 @@
 /usr/sbin/iptables -A OUTPUT -p tcp --dport ftp-data -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport xmpp-client -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport 5000 -j ACCEPT
+/usr/sbin/iptables -A OUTPUT -p udp --dport mdns -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport 6667 -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-#/usr/sbin/iptables -A OUTPUT -j LOGDROP
+/usr/sbin/iptables -A OUTPUT -j LOGDROP
 /usr/sbin/iptables -A OUTPUT -m limit -j LOG --log-prefix "Blocked on OUTPUT: "
 /usr/sbin/iptables -A OUTPUT -j DROP
 
-#/usr/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+# /usr/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 /usr/sbin/iptables-save > /etc/iptables/iptables.rules
-#/usr/sbin/iptables-restore < /etc/iptables/iptables.rules
+# /usr/sbin/iptables-restore < /etc/iptables/iptables.rules

@@ -10,9 +10,10 @@ ECLIM_HOME=$ECLIPSE_HOME/plugins/org.eclim_1.6.2
 JAVA_HOME=/opt/java
 MAVEN_HOME=/opt/maven
 PYTHONPATH=$HOME/usr/local/lib/python3.2/site-packages
+R_HOME=/usr/lib/R
 
-export ANDROID_HOME ANT_HOME CATALINA_HOME ECLIPSE_HOME ECLIM_HOME JAVA_HOME MAVEN_HOME PYTHONPATH
-export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$ECLIM_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+export ANDROID_HOME ANT_HOME CATALINA_HOME ECLIPSE_HOME ECLIM_HOME JAVA_HOME MAVEN_HOME PYTHONPATH R_HOME
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$ECLIM_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$R_HOME/bin:$PATH
 
 export EDITOR=emacsclient
 export HISTCONTROL=ignoreboth
@@ -22,9 +23,7 @@ export MAIL=$HOME/Mail
 export PAGER=less
 export SHELL=/bin/bash
 # export SHELL=/bin/zsh
-export TERM=xterm-256color
-# export TERM=rxvt-unicode
-# export TERM=screen
+export TERM=rxvt-256color
 
 shopt -s cdspell
 # shopt -s checkwinsize
