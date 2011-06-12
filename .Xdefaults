@@ -1,5 +1,8 @@
+! /usr/share/icons
+! Xcursor.theme:oxygen
+! Xcursor.size:16
+
 Xft.antialias:True
-! Xft.dpi:96
 Xft.hinting:True
 Xft.hintstyle:hintslight
 Xft.rgba:rgb

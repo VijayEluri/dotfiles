@@ -27,6 +27,7 @@
 (set-background-color "black")
 (set-foreground-color "white")
 (set-cursor-color "white")
+(set-frame-parameter (selected-frame) 'alpha '(80 40))
 ;; (setq x-select-enable-clipboard t)
 
 ;; (setq default-major-mode 'text-mode)

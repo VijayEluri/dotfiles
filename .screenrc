@@ -147,10 +147,10 @@ screen -t mail 4 mutt
 screen -t talk 5 finch
 screen -t chat 6 irssi -c irc.freenode.net -p 6667
 screen -t web 7 elinks http://www.google.com
-# screen -t home 8 ssh phua@aleph0 screen -x
+# screen -t rash 8 ssh -N -f -q shellrsa;ssh phua-66004 screen -x
 # screen -t btor 9 rtorrent
 # screen -t music 10 cmus
-select 0 # screen -p 0
+select 0
 
 # caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
 # hardstatus alwaysignore
