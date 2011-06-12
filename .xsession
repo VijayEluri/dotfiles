@@ -2,7 +2,10 @@
 
 /usr/bin/xmodmap ~/.xmodmap &
 /usr/bin/xrdb -merge ~/.Xdefaults &
-/usr/bin/xrandr --fb 2720x1024 --output LVDS1 --mode 1440x900 --output VGA1 --mode 1280x1024 --right-of LVDS1 &
+if /usr/bin/xrandr -q | grep -q VGA
+then
+    /usr/bin/xrandr --fb 2720x1024 --output LVDS1 --mode 1440x900 --output VGA1 --mode 1280x1024 --right-of LVDS1
+fi
 /usr/bin/xsetroot -solid black &
 /bin/sh ~/.fehbg &
 /usr/bin/xscreensaver &
