@@ -13,21 +13,21 @@ URxvt*geometry:80x24
 URxvt*loginShell:True
 URxvt*saveLines:8192
 URxvt*urgentOnBell:True
-URxvt*visualBell:False
+URxvt*visualBell:True
 
 URxvt*background:rgba:0000/0000/0000/cccc
 URxvt*foreground:white
 URxvt*transparent:True
 URxvt*fading:50
 URxvt*fadeColor:black
-URxvt*tintColor:blue
-URxvt*shading:40
+URxvt*tintColor:green
+URxvt*shading:50
 
 ! /usr/share/fonts/.../fonts.alias
-URxvt*font:xft:Bitstream Vera Sans Mono
-URxvt*boldFont:xft:Bitstream Vera Sans Mono:bold
-URxvt*italicFont:xft:Bitstream Vera Sans Mono:italic
-URxvt*boldItalicFont:xft:Bitstream Vera Sans Mono:bold:italic
+URxvt*font:xft:Bitstream Vera Sans Mono-10
+URxvt*boldFont:xft:Bitstream Vera Sans Mono-10:bold
+URxvt*italicFont:xft:Bitstream Vera Sans Mono-10:italic
+URxvt*boldItalicFont:xft:Bitstream Vera Sans Mono-10:bold:italic
 
 URxvt*scrollBar:False
 URxvt*scrollstyle:plain
@@ -48,7 +48,7 @@ URxvt.underlineURLs:True
 
 Emacs*background:black
 Emacs*foreground:white
-Emacs*font:DejaVu Sans Mono
+Emacs*font:DejaVu Sans Mono-10
 Emacs*fontBackend:xft,x
 Emacs*fullscreen:fullboth
 
