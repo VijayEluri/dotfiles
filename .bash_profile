@@ -2,7 +2,7 @@
 
 set -o emacs
 
-export EDITOR=emacsclient
+export EDITOR="emacsclient -t"
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=65535
 export HISTSIZE=65535
@@ -13,7 +13,6 @@ export SHELL=/bin/bash
 export TERM=rxvt-256color
 
 shopt -s cdspell
-# shopt -s checkwinsize
 shopt -s histappend
 
 ANDROID_HOME=$HOME/usr/local/android-sdk
@@ -31,8 +30,7 @@ export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATA
 
 source $HOME/.bashrc
 source $HOME/.bash_aliases
-source $HOME/.bash_functions
-# source /etc/bash_completion
+# source /etc/bash_completion.d/
 
 # eval `keychain [--noask] --eval [--agents ssh] id_rsa` || exit 1
 # eval `keychain --eval id_rsa`

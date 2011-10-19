@@ -140,16 +140,14 @@ bind ^] paste [.]
 # screen -t 40 2 rlogin server
 
 screen -t root 0 su -
-screen -t shell 1
-screen -t emacs 2 emacs --debug-init -nw
-screen -t vim 3 vim
-screen -t mail 4 mutt
-screen -t talk 5 finch
-screen -t chat 6 irssi -c irc.freenode.net -p 6667
-screen -t web 7 elinks http://www.google.com
-# screen -t rash 8 ssh -N -f -q shellrsa;ssh phua-66004 screen -x
-# screen -t btor 9 rtorrent
-# screen -t music 10 cmus
+screen -t user 1 zsh
+screen -t text 2 emacs --debug-init -nw
+screen -t mail 3 mutt
+screen -t chat 4 irssi -c localhost -p 6667
+# screen -t bitr 5 rtorrent
+# screen -t cmus 6 cmus
+# screen -t htop 8 htop
+# screen -t itop 9 iotop
 select 0
 
 # caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
