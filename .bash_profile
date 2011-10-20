@@ -29,8 +29,6 @@ export ANDROID_HOME ANT_HOME CATALINA_HOME ECLIPSE_HOME ECLIM_HOME JAVA_HOME MAV
 export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$ECLIM_HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin:$R_HOME/bin:$PATH
 
 source $HOME/.bashrc
-source $HOME/.bash_aliases
-# source /etc/bash_completion.d/
 
 # eval `keychain [--noask] --eval [--agents ssh] id_rsa` || exit 1
 # eval `keychain --eval id_rsa`

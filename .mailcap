@@ -1,6 +1,6 @@
-text/html: echo && /usr/bin/w3m -dump %s; nametemplate=%s.html; copiousoutput
 application/pdf; /usr/bin/evince %s
 image/gif;  /usr/bin/display %s
 image/jpg;  /usr/bin/display %s
 image/jpeg; /usr/bin/display %s
 image/png;  /usr/bin/display %s
+text/html; /usr/bin/w3m -I %{charset} -T text/html -dump; copiousoutput

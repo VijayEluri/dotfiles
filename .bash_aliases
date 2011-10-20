@@ -32,6 +32,8 @@ alias emacs="emacs --debug-init -nw"
 # alias start-eclim="eclimd &"
 # alias stop-eclim="eclim -command shutdown"
 
+function jstackp() { jstack `jps | grep $1 | awk '{ print $1 }'`; }
+
 # alias curl="curl"
 # alias wpdf="wget -r -l1 --no-parent -A.pdf $1"
 # alias crawl="wget -nv -w 15 --random-wait -k -m"
@@ -42,7 +44,7 @@ alias sshw="ssh -N -f -q shellrsa;ssh phua-66004"
 alias mntdrive="sshfs phua@aleph0:/mnt/drive ~/aleph0"
 alias cmplayer="mplayer -cache 204800 -idx -sws 0 -zoom -fs"
 alias ncplayer="nc aleph0 8080 | mplayer -cache 204800 -idx -"
-ncstreamer () { cat $1 | nc -l -p 8080; }
+ncstreamer() { cat $1 | nc -l -p 8080; }
 
 alias fics="xboard -ics -icshost freechess.org"
 alias chess="xboard -fcp /usr/bin/gnuchess --xboard -fd /usr/local/bin -scp /usr/local/bin/gnuchess --xboard -sd /usr/local/bin"
