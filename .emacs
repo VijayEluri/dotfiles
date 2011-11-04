@@ -18,24 +18,31 @@
 (transient-mark-mode t)
 (delete-selection-mode t)
 ;; (auto-fill-mode t)
+;; (current-fill-column 70)
 (abbrev-mode t)
 
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 (setq require-final-newline t)
 
-(set-background-color "black")
-(set-foreground-color "white")
-(set-cursor-color "white")
-(set-frame-parameter (selected-frame) 'alpha '(80 40))
-;; (setq x-select-enable-clipboard t)
-
 ;; (setq default-major-mode 'text-mode)
 ;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;; (add-hook 'text-mode-hook (lambda () (refill-mode t)))
 
-;; (require 'desktop)
-;; (desktop-save-mode t)
+(put 'narrow-to-region 'disabled nil)
+
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+(set-background-color "black")
+(set-foreground-color "white")
+(set-cursor-color "white")
+(set-frame-parameter (selected-frame) 'alpha '(90 60))
+(setq x-select-enable-primary t)
+(setq x-select-enable-clipboard t)
+
+(windmove-default-keybindings)
+(winner-mode t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -44,28 +51,20 @@
         (y-or-n-p-with-timeout
          "Are you sure you want to exit emacs?" 5 t)))
 
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-c\C-m" 'execute-extended-command)
-
-;; (windmove-default-keybindings)
-(global-set-key (kbd "<M-left>") 'windmove-left)
-(global-set-key (kbd "<M-down>") 'windmove-down)
-(global-set-key (kbd "<M-up>") 'windmove-up)
-(global-set-key (kbd "<M-right>") 'windmove-right)
-
-(add-to-list 'load-path (setq user-load-path (expand-file-name "~/.emacs.d")))
-(add-to-list 'load-path (setq custom-load-path (concat user-load-path "/custom")))
-(add-to-list 'load-path (setq local-load-path (concat user-load-path "/site-lisp")))
+(add-to-list 'load-path (setq emacs-d (expand-file-name "~/.emacs.d")))
+(add-to-list 'load-path (setq lisp-directory (concat emacs-d "/lisp")))
+(add-to-list 'load-path (setq site-lisp-directory (concat emacs-d "/site-lisp")))
 (add-to-list 'load-path (setq global-load-path "/usr/share/emacs/site-lisp"))
 
-(setq custom-file (concat custom-load-path "/custom.el"))
+(setq custom-file (concat emacs-d "/custom.el"))
 (load custom-file 'noerror)
 
-(add-to-list 'backup-directory-alist (cons "." (concat user-load-path "/.backups")))
+(add-to-list 'backup-directory-alist (cons "." (concat emacs-d "/.backups")))
 (setq tramp-backup-directory-alist backup-directory-alist)
 
 (defalias 'list-buffers 'ibuffer)
 (iswitchb-mode t)
+(icomplete-mode t)
 
 (require 'ido)
 (ido-mode t)
@@ -85,54 +84,61 @@
 (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-use-cookies nil)
 
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-(global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+(setq gnus-check-new-newsgroups nil)
+;; (setq gnus-dribble-directory (concat emacs-d "/auto-save-list"))
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+
+(add-to-list 'auto-mode-alist '("\\.org$'" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cb" 'org-iswitchb)
+(setq org-log-done t)
+(setq org-startup-indented t)
+(setq org-startup-folded nil)
 
 ;; (require 'color-theme)
 ;; (color-theme-initialize)
 ;; (setq color-theme-is-global t)
 ;; (color-theme-hober)
 
-;; (add-to-list 'load-path (concat local-load-path "/anything"))
+;; (add-to-list 'load-path (concat site-lisp-directory "/anything"))
 ;; (require 'anything)
 ;; (require 'anything-config)
 
-(add-to-list 'load-path (concat local-load-path "/auto-complete"))
+(add-to-list 'load-path (concat site-lisp-directory "/auto-complete"))
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories (concat local-load-path "/auto-complete/dictionary"))
+(add-to-list 'ac-dictionary-directories
+             (concat site-lisp-directory "/auto-complete/dictionary"))
 (ac-config-default)
 
-(add-to-list 'load-path (concat local-load-path "/company"))
+(add-to-list 'load-path (concat site-lisp-directory "/company"))
 (autoload 'company-mode "company" nil t)
 
-(add-to-list 'load-path (concat local-load-path "/yasnippet"))
+(add-to-list 'load-path (concat site-lisp-directory "/yasnippet"))
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory (concat local-load-path "/yasnippet/snippets"))
+(yas/load-directory (concat site-lisp-directory "/yasnippet/snippets"))
 
 (load "functions")
-;; (load "crc")
-;; (load "cpprc")
+
 (load "elrc")
-;; (load "emmsrc")
 (load "hsrc")
-(load "eclimrc")
-;; (load "jderc")
-;; (load "jsrc")
 (load "lisprc")
-;; (load "maxrc")
+(load "maxrc")
 (load "mrc")
-(load "pyrc")
+;; (load "pyrc")
 (load "rrc")
-;; (load "sqlrc")
 (load "texrc")
-;; (load "xmlrc")
 
 (shell)
 
 (dired "~")
+
+(gnus-other-frame)
+
+(require 'desktop)
+(desktop-save-mode t)
 
 (require 'server)
 (unless (server-running-p) (server-start))

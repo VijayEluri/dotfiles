@@ -1,5 +1,7 @@
 (global-set-key "\C-xg" 'goto-line)
 
+(global-set-key (kbd "C-x a r") 'align-regexp)
+
 (defun google-region (start end)
   (interactive "r")
   (browse-url (concat "http://www.google.com/search?q=" (buffer-substring start end))))
@@ -10,13 +12,19 @@
   (interactive "r")
   (browse-url (concat "http://dictionary.reference.com/browse/" (buffer-substring start end))))
 
-(global-set-key (kbd "\C-cr") 'define-region)
+(global-set-key (kbd "\C-cd") 'define-region)
 
 (defun lookup-region (start end)
   (interactive "r")
   (browse-url (concat "http://thesaurus.com/browse/" (buffer-substring start end))))
 
-(global-set-key (kbd "\C-ct") 'lookup-region)
+;; (global-set-key (kbd "\C-cl") 'lookup-region)
+
+(defun translate-region (start end)
+  (interactive "r")
+  (browse-url (concat "http://translate.google.com/#auto|en|" (buffer-substring start end))))
+
+(global-set-key (kbd "\C-ct") 'translate-region)
 
 (defun format-code (start end)
   (interactive "r")
@@ -28,8 +36,8 @@
 
 (global-set-key "\C-cf" 'format-code)
 
-(defun generate-tag-file (directory)
-  "Generate tag file."
+(defun generate-jtag-file (directory)
+  "Generate Java tag file."
   (interactive "DDirectory name: ")
   ;; (shell-command (format "ctags -fs %s/TAGS -e -R %s" directory directory))
   ;; (eshell-command (format "find %s -type f -name \\*.java | xargs etags --language-force=Java" directory))

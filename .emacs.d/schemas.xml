@@ -1,0 +1,5 @@
+<locatingRules>
+  <uri pattern="build.xml" uri="file:///home/phua/usr/share/schemas/ant-1.8.rnc" />
+  <uri pattern="pom.xml" uri="file:///home/phua/usr/share/schemas/maven-v4_0_0.rnc" />
+  <uri pattern="beans.xml" uri="file:///home/phua/usr/share/schemas/spring-beans-3.0.rnc" />
+</locatingRules>
