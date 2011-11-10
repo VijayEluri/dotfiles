@@ -12,6 +12,10 @@ export SHELL=/bin/bash
 # export SHELL=/bin/zsh
 export TERM=rxvt-256color
 
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+# export QT_IM_MODULE=ibus
+
 shopt -s cdspell
 shopt -s histappend
 

@@ -12,4 +12,8 @@ fi
 /usr/bin/xcompmgr -c &
 /usr/bin/stalonetray &
 
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+/usr/bin/ibus-daemon --xim &
+
 exec /usr/bin/xmonad
