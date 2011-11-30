@@ -44,14 +44,6 @@
 /usr/sbin/iptables -A OUTPUT -p udp --dport mdns -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport 6667 -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport 6881 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6882 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6883 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6884 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6885 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6886 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6887 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6888 -j ACCEPT
-/usr/sbin/iptables -A OUTPUT -p tcp --dport 6889 -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -p tcp --dport acmsoda -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 /usr/sbin/iptables -A OUTPUT -j LOGDROP

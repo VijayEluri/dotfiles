@@ -97,6 +97,12 @@
 (setq org-startup-indented t)
 (setq org-startup-folded nil)
 
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
 ;; (require 'color-theme)
 ;; (color-theme-initialize)
 ;; (setq color-theme-is-global t)
@@ -121,6 +127,7 @@
 (yas/load-directory (concat site-lisp-directory "/yasnippet/snippets"))
 
 (load "functions")
+(load "emmsrc")
 
 (load "elrc")
 (load "hsrc")
@@ -129,16 +136,15 @@
 (load "mrc")
 ;; (load "pyrc")
 (load "rrc")
-(load "texrc")
 
 (shell)
 
 (dired "~")
 
-(gnus-other-frame)
+;; (gnus-other-frame)
 
-(require 'desktop)
-(desktop-save-mode t)
+;; (require 'desktop)
+;; (desktop-save-mode t)
 
 (require 'server)
 (unless (server-running-p) (server-start))
