@@ -1,35 +1,13 @@
-;; Emacs Eclim
-
-;; (add-to-list 'load-path (concat lisp-directory "/emacs-eclim"))
-;; (add-to-list 'load-path (concat lisp-directory "/emacs-eclim/vendor"))
-;; (require 'eclim)
-
-;; (setq eclim-auto-save t)
-;; (global-eclim-mode)
-
-;; (load "company-emacs-eclim")
-;; (company-emacs-eclim-setup)
-
-;; JDEE
-
-(add-to-list 'load-path (concat lisp-directory "/jdee/lisp"))
-(add-to-list 'load-path (concat global-load-path "/cedet/common"))
-(load-file (concat global-load-path "/cedet/common/cedet.el"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/cogre"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/contrib"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/ede"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/eieio"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/semantic"))
-;; (add-to-list 'load-path (concat global-load-path "/cedet/speedbar"))
-(add-to-list 'load-path (concat lisp-directory "/elib")) ;; deprecated
-(add-to-list 'load-path (concat global-load-path "/ecb"))
-(load-file (concat global-load-path "/ecb/ecb.el"))
+(add-to-list 'load-path (concat site-lisp-directory "/jdee/lisp"))
+;; (add-to-list 'load-path (concat site-lisp-directory "/elib")) ;; deprecated
+;; (add-to-list 'load-path (concat global-load-path "/ecb"))
+;; (load-file (concat global-load-path "/ecb/ecb.el"))
 ;; (require 'ecb) ;; comment to defer loading with ecb-autoloads
 (require 'ecb-autoloads)
 
-(require 'jde) ;; comment to defer loading jde with autoload
 (autoload 'jde-mode "jde-mode" "JDE Mode" t)
 (setq auto-mode-alist (append '(("\\.java$" . jde-mode)) auto-mode-alist))
+(require 'jde) ;; comment to defer loading jde with autoload
 
 (defun my-jde-mode-hook ()
   (message "Loading my-jde-mode-hook...")
@@ -53,7 +31,7 @@
 
   (flymake-mode t)
   (yas/minor-mode t)
-  ;; (hs-minor-mode t)
+  (hs-minor-mode t)
 
   (message "...jde-mode-hook loaded."))
 

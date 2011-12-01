@@ -126,11 +126,17 @@
 (yas/initialize)
 (yas/load-directory (concat site-lisp-directory "/yasnippet/snippets"))
 
+(load-file "/usr/share/emacs/23.3/lisp/cedet/cedet.elc")
+(global-ede-mode t)
+;; (semantic-load-enable-code-helpers)
+;; (global-srecode-minor-mode t)
+
 (load "functions")
 (load "emmsrc")
 
 (load "elrc")
 (load "hsrc")
+(load "javarc")
 (load "lisprc")
 (load "maxrc")
 (load "mrc")
