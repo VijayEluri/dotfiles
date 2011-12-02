@@ -126,10 +126,20 @@
 (yas/initialize)
 (yas/load-directory (concat site-lisp-directory "/yasnippet/snippets"))
 
-(load-file "/usr/share/emacs/23.3/lisp/cedet/cedet.elc")
+(add-to-list 'load-path (concat site-lisp-directory "/cedet/common"))
+(load-file (concat site-lisp-directory "/cedet/common/cedet.el"))
+(add-to-list 'load-path (concat site-lisp-directory "/cedet/ede"))
+(add-to-list 'load-path (concat site-lisp-directory "/cedet/eieio"))
+(add-to-list 'load-path (concat site-lisp-directory "/cedet/semantic"))
+(add-to-list 'load-path (concat site-lisp-directory "/cedet/srecode"))
 (global-ede-mode t)
 ;; (semantic-load-enable-code-helpers)
-;; (global-srecode-minor-mode t)
+(global-srecode-minor-mode 1)
+
+(add-to-list 'load-path (concat site-lisp-directory "/ecb"))
+(load-file (concat site-lisp-directory "/ecb/ecb.el"))
+(require 'ecb-autoloads)
+(setq ecb-source-path (quote (("~/workspaces" "/"))))
 
 (load "functions")
 (load "emmsrc")
