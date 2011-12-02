@@ -1,13 +1,7 @@
 (add-to-list 'load-path (concat site-lisp-directory "/jdee/lisp"))
-;; (add-to-list 'load-path (concat site-lisp-directory "/elib")) ;; deprecated
-;; (add-to-list 'load-path (concat global-load-path "/ecb"))
-;; (load-file (concat global-load-path "/ecb/ecb.el"))
-;; (require 'ecb) ;; comment to defer loading with ecb-autoloads
-(require 'ecb-autoloads)
-
 (autoload 'jde-mode "jde-mode" "JDE Mode" t)
 (setq auto-mode-alist (append '(("\\.java$" . jde-mode)) auto-mode-alist))
-(require 'jde) ;; comment to defer loading jde with autoload
+(require 'jde)
 
 (defun my-jde-mode-hook ()
   (message "Loading my-jde-mode-hook...")
