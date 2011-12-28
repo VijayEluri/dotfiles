@@ -12,6 +12,8 @@ fi
 /usr/bin/xcompmgr -c &
 /usr/bin/stalonetray &
 
+/usr/bin/synergys --config ~/synergy.conf
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 /usr/bin/ibus-daemon --xim &
