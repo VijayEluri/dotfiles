@@ -1,4 +1,4 @@
-(add-to-list 'load-path (concat site-lisp-directory "/python"))
+(add-to-list 'load-path (concat local-lisp-directory "/python"))
 (autoload 'python-mode "python-mode" "Python mode." t)
 (add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
@@ -19,8 +19,8 @@
 (setq ropemacs-enable-autoimport t)
 (setq ropemacs-autoimport-modules '("os", "shutil"))
 (require 'pymacs)
-(pymacs-load "ropemacs" "rope-")
+;; (pymacs-load "ropemacs" "rope-")
 
-(add-to-list 'load-path (concat global-load-path "/python-mode"))
+(add-to-list 'load-path (concat global-lisp-directory "/python-mode"))
 (setq ipython-command "/usr/bin/ipython")
 (require 'ipython)

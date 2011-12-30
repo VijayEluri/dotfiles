@@ -1,4 +1,4 @@
-(add-to-list 'load-path (concat global-load-path "/emms"))
+(add-to-list 'load-path (concat global-lisp-directory "/emms"))
 (require 'emms-setup)
 (emms-devel)
 (emms-default-players)

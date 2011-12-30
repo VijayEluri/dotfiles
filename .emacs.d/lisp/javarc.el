@@ -1,33 +1,40 @@
-(add-to-list 'load-path (concat site-lisp-directory "/jdee/lisp"))
+(add-to-list 'load-path (concat local-lisp-directory "/jdee/lisp"))
 (autoload 'jde-mode "jde-mode" "JDE Mode" t)
 (setq auto-mode-alist (append '(("\\.java$" . jde-mode)) auto-mode-alist))
 (require 'jde)
 
 (defun my-jde-mode-hook ()
-  (message "Loading my-jde-mode-hook...")
-
-  (define-key c-mode-base-map "\C-ca" 'jde-javadoc-generate-javadoc-template)
   (define-key c-mode-base-map "\C-m" 'newline-and-indent)
-  (c-set-offset 'substatement-open 0)
-  (c-set-offset 'statement-case-open 0)
-  (c-set-offset 'case-label '+)
 
   (c-add-style "my-java"
                '("java"
                  (c-basic-offset . 4)
-                 (c-hanging-braces-alist . ())))
+                 (c-tab-always-indent . t)
+                 (c-comment-only-line-offset . 4)
+                 (c-hanging-braces-alist . ((substatement-open after)
+                                            (brace-list-open)))
+                 (c-hanging-colons-alist . ((member-init-intro before)
+                                            (inher-intro)
+                                            (case-label after)
+                                            (label after)
+                                            (access-label after)))
+                 (c-cleanup-list . (scope-operator
+                                    empty-defun-braces
+                                    defun-close-semi))
+                 (c-offsets-alist . ((arglist-close . c-lineup-arglist)
+                                     (substatement-open . 0)
+                                     (case-label . 4)
+                                     (block-open . 0)
+                                     (knr-argdecl-intro . -)))
+                 (c-echo-syntactic-information-p . t)))
   (c-set-style "my-java")
-  ;; (setq c-auto-newline t)
-  (setq c-comment-continuation-starts "* "
-        tab-width 4
-        tempo-interactive t
-        c-basic-offset 4)
+  (setq tab-width 4
+        indent-tabs-mode nil)
+  (c-toggle-auto-newline t)
 
   (flymake-mode t)
   (yas/minor-mode t)
-  (hs-minor-mode t)
-
-  (message "...jde-mode-hook loaded."))
+  (hs-minor-mode t))
 
 (add-hook 'jde-mode-hook 'my-jde-mode-hook)
 

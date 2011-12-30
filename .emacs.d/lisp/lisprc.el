@@ -1,5 +1,5 @@
 (setq inferior-lisp-program "/usr/bin/sbcl")
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/slime")
+(add-to-list 'load-path (concat global-lisp-directory "/slime"))
 (require 'slime-autoloads)
 (slime-setup '(slime-repl))
 
