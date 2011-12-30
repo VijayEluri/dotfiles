@@ -1,4 +1,4 @@
-# eval `dircolors -b /etc/DIR_COLORS`
+#!/bin/bash
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -8,38 +8,30 @@ alias .....="cd ../../../.."
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ll -a"
-alias lr="ll -R"
 alias li="ll -i"
+
 alias tree="tree -Csu"
 
 alias mkdir="mkdir -p"
 alias rmdir="rm -rf"
-alias rm="mv -t ~/.trash"
 
 alias which="which -a"
 
-alias ps="ps --forest"
+alias emacs="emacs --debug-init -nw"
+
 alias df="df -h"
 alias du="du -sh"
 alias free="free -m"
-
+alias ps="ps --forest"
+alias top="htop"
 alias vmstat="vmstat -S M"
 alias sar="sar"
 
-alias emacs="emacs --debug-init -nw"
-# alias etags="/usr/bin/etags.emacs"
-# alias jtags="find . -type f -iname \*.java | xargs etags -l java"
-# alias start-eclim="eclimd &"
-# alias stop-eclim="eclim -command shutdown"
-
-function jstackp() { jstack `jps | grep $1 | awk '{ print $1 }'`; }
-
-# alias curl="curl"
-# alias wpdf="wget -r -l1 --no-parent -A.pdf $1"
-# alias crawl="wget -nv -w 15 --random-wait -k -m"
-
 alias tcpdump="tcpdump -i eth0"
 alias sshw="ssh -N -f -q shellrsa;ssh phua-66004"
+
+function jstackp() { jstack `jps | grep $1 | awk '{ print $1 }'`; }
+alias mocha="java mocha.Decompiler -v -o"
 
 alias mntdrive="sshfs phua@aleph0:/mnt/drive ~/aleph0"
 alias cmplayer="mplayer -cache 204800 -idx -sws 0 -zoom -fs"
