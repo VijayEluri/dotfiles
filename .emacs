@@ -1,4 +1,4 @@
-;; M-x byte-compile ~/.emacs
+;; M-x byte-compile-file ~/.emacs
 ;; C-u 0 M-x byte-recompile-directory ~/.emacs.d
 
 (require 'cl)
@@ -19,20 +19,12 @@
 (delete-selection-mode t)
 ;; (auto-fill-mode t)
 ;; (current-fill-column 70)
+;; (flyspell-mode t)
 (abbrev-mode t)
 
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 (setq require-final-newline t)
-
-;; (setq default-major-mode 'text-mode)
-;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
-;; (add-hook 'text-mode-hook (lambda () (refill-mode t)))
-
-(put 'narrow-to-region 'disabled nil)
-
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-c\C-m" 'execute-extended-command)
 
 (set-background-color "black")
 (set-foreground-color "white")
@@ -41,7 +33,21 @@
 (setq x-select-enable-primary t)
 (setq x-select-enable-clipboard t)
 
+(put 'narrow-to-region 'disabled nil)
+
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+
+(global-set-key "\C-xp"
+                '(lambda (&optional n)
+                   (interactive "P")
+                   (other-window (- (prefix-numeric-value n)))))
+(global-set-key "\C-xn" 'other-window)
 (windmove-default-keybindings)
+(global-set-key (kbd "ESC <left>") 'windmove-left)
+(global-set-key (kbd "ESC <down>") 'windmove-down)
+(global-set-key (kbd "ESC <up>") 'windmove-up)
+(global-set-key (kbd "ESC <right>") 'windmove-right)
 (winner-mode t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -51,16 +57,15 @@
         (y-or-n-p-with-timeout
          "Are you sure you want to exit emacs?" 5 t)))
 
-(add-to-list 'load-path (setq emacs-d (expand-file-name "~/.emacs.d")))
-(add-to-list 'load-path (setq lisp-directory (concat emacs-d "/lisp")))
-(add-to-list 'load-path (setq site-lisp-directory (concat emacs-d "/site-lisp")))
-(add-to-list 'load-path (setq global-load-path "/usr/share/emacs/site-lisp"))
+(add-to-list 'load-path (setq emacs-directory (expand-file-name "~/.emacs.d")))
+(add-to-list 'load-path (setq lisp-directory (concat emacs-directory "/lisp")))
+(add-to-list 'load-path (setq local-lisp-directory (concat emacs-directory "/site-lisp")))
+(add-to-list 'load-path (setq global-lisp-directory "/usr/share/emacs/site-lisp"))
 
-(setq custom-file (concat emacs-d "/custom.el"))
+(setq custom-file (concat emacs-directory "/custom.el"))
 (load custom-file 'noerror)
 
-(add-to-list 'backup-directory-alist (cons "." (concat emacs-d "/.backups")))
-(setq tramp-backup-directory-alist backup-directory-alist)
+(add-to-list 'backup-directory-alist (cons "." (concat emacs-directory "/.backups")))
 
 (defalias 'list-buffers 'ibuffer)
 (iswitchb-mode t)
@@ -77,6 +82,7 @@
 (setenv "ESHELL" shell-file-name)
 (setq explicit-sh-args '("--login" "-i"))
 
+(setq tramp-backup-directory-alist backup-directory-alist)
 (setq tramp-default-method "ssh")
 
 (setq browse-url-browser-function 'w3m-browse-url)
@@ -85,7 +91,7 @@
 (setq w3m-use-cookies nil)
 
 (setq gnus-check-new-newsgroups nil)
-;; (setq gnus-dribble-directory (concat emacs-d "/auto-save-list"))
+(setq gnus-dribble-directory emacs-directory)
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
 
 (add-to-list 'auto-mode-alist '("\\.org$'" . org-mode))
@@ -108,56 +114,49 @@
 ;; (setq color-theme-is-global t)
 ;; (color-theme-hober)
 
-;; (add-to-list 'load-path (concat site-lisp-directory "/anything"))
-;; (require 'anything)
-;; (require 'anything-config)
+(add-to-list 'load-path (concat local-lisp-directory "/anything"))
+(require 'anything)
+(require 'anything-config)
 
-(add-to-list 'load-path (concat site-lisp-directory "/auto-complete"))
+(add-to-list 'load-path (concat local-lisp-directory "/auto-complete"))
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories
-             (concat site-lisp-directory "/auto-complete/dictionary"))
+(add-to-list 'ac-dictionary-directories (concat local-lisp-directory "/auto-complete/dictionary"))
 (ac-config-default)
 
-(add-to-list 'load-path (concat site-lisp-directory "/company"))
+(add-to-list 'load-path (concat local-lisp-directory "/company"))
 (autoload 'company-mode "company" nil t)
 
-(add-to-list 'load-path (concat site-lisp-directory "/yasnippet"))
+(add-to-list 'load-path (concat local-lisp-directory "/yasnippet"))
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory (concat site-lisp-directory "/yasnippet/snippets"))
+(yas/load-directory (concat local-lisp-directory "/yasnippet/snippets"))
 
-(add-to-list 'load-path (concat site-lisp-directory "/cedet/common"))
-(load-file (concat site-lisp-directory "/cedet/common/cedet.el"))
-(add-to-list 'load-path (concat site-lisp-directory "/cedet/ede"))
-(add-to-list 'load-path (concat site-lisp-directory "/cedet/eieio"))
-(add-to-list 'load-path (concat site-lisp-directory "/cedet/semantic"))
-(add-to-list 'load-path (concat site-lisp-directory "/cedet/srecode"))
+(add-to-list 'load-path (concat local-lisp-directory "/cedet/common"))
+(load-file (concat local-lisp-directory "/cedet/common/cedet.el"))
+(add-to-list 'load-path (concat local-lisp-directory "/cedet/ede"))
+(add-to-list 'load-path (concat local-lisp-directory "/cedet/eieio"))
+(add-to-list 'load-path (concat local-lisp-directory "/cedet/semantic"))
+(add-to-list 'load-path (concat local-lisp-directory "/cedet/srecode"))
 (global-ede-mode t)
-;; (semantic-load-enable-code-helpers)
+(semantic-load-enable-code-helpers)
+(setq semantic-load-turn-useful-things-on t)
 (global-srecode-minor-mode 1)
 
-(add-to-list 'load-path (concat site-lisp-directory "/ecb"))
-(load-file (concat site-lisp-directory "/ecb/ecb.el"))
+(add-to-list 'load-path (concat local-lisp-directory "/ecb"))
+(load-file (concat local-lisp-directory "/ecb/ecb.el"))
 (require 'ecb-autoloads)
-(setq ecb-source-path (quote (("~/workspaces" "/"))))
 
-(load "functions")
-(load "emmsrc")
+(mapcar #'load '("functions" "emmsrc" "elrc" "hsrc" "javarc" "lisprc" "maxrc" "mrc" "pyrc" "rrc"))
 
-(load "elrc")
-(load "hsrc")
-(load "javarc")
-(load "lisprc")
-(load "maxrc")
-(load "mrc")
-;; (load "pyrc")
-(load "rrc")
+(let ((version (int-to-string (+ emacs-major-version (/ emacs-minor-version 10.0)))))
+  (generate-tag-file (concat "/usr/share/emacs/" version "/lisp"))
+  (visit-tags-table (concat emacs-directory "/TAGS")))
 
 (shell)
 
 (dired "~")
 
-;; (gnus-other-frame)
+(gnus-other-frame)
 
 ;; (require 'desktop)
 ;; (desktop-save-mode t)
