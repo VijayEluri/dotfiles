@@ -27,9 +27,9 @@ alignment top_right
 background no
 border_width 1
 cpu_avg_samples 2
-default_color white
+default_color black
 default_outline_color white
-default_shade_color white
+default_shade_color gray
 double_buffer yes
 draw_borders no
 draw_graph_borders yes
@@ -47,7 +47,7 @@ out_to_stderr no
 extra_newline no
 own_window yes
 own_window_class Conky
-own_window_type desktop
+own_window_type normal
 own_window_argb_visual yes
 own_window_argb_value 80
 own_window_transparent yes
@@ -99,12 +99,15 @@ ${color lightgrey} ${tcp_portmon 1 65535 rhost 3} ${tcp_portmon 1 65535 lservice
 
 ${color grey}Inbound:$color ${tcp_portmon 1 65535 count} Outbound:$color ${tcp_portmon 1 65535 count}
 $hr
-# RAM : ${memgraph    0000ff 00ff00 -l -t}
-# CPU : ${cpugraph    00ff00 ff0000 -l -t}
-# Disk: ${diskiograph 0000ff 00ff00 -l -t}
-#$hr
-Mail: ${new_mails /home/phua/Mail/Gmail/INBOX 60} / ${mails /home/phua/Mail/Gmail/INBOX 60}
+Load: ${loadgraph   00ff00 ff0000 -l -t}
+RAM : ${memgraph    0000ff 00ff00 -l -t}
+CPU : ${cpugraph    00ff00 ff0000 -l -t}
+Disk: ${diskiograph 0000ff 00ff00 -l -t}
+$hr
+${color grey}Mail:$color ${new_mails /home/phua/Mail/Gmail/INBOX 60} / ${mails /home/phua/Mail/Gmail/INBOX 60}
 
-${exec tail -n 5 /home/phua/irclogs/localhost/* }
+${exec tail -n 5 /home/phua/irclogs/localhost/\&bitlbee.log }
+
+${exec tail -n 5 /home/phua/irclogs/localhost/\#twitter_lambder.log }
 $hr
 ${color grey}ACPI:$color $acpiacadapter Fan:$color $acpifan Temp:$color $acpitemp Battery:$color $battery
