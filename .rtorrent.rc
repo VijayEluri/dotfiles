@@ -1,12 +1,10 @@
-port_range = 6881-6889
+bind = 192.168.0.3
+port_range = 6881-6881
 port_random = no
 directory = ~/downloads/torrents/files
-session = ~/downloads/torrents/session
-# encryption = allow_incoming, try_outgoing, require
-# schedule =
-upload_rate = 10
-download_rate = 25
-# min_peers =
-# max_peers =
-max_uploads = 3
-dht_port = 6881
+session = ~/downloads/torrents/sessions
+encryption = allow_incoming,try_outgoing,enable_retry
+peer_exchange = no
+
+upload_rate = 30
+download_rate = 50

@@ -12,7 +12,12 @@ fi
 /usr/bin/xcompmgr -c &
 /usr/bin/stalonetray &
 
-/usr/bin/synergys --config ~/synergy.conf
+if [ -e ~/synergy.conf ]
+then
+    /usr/bin/synergys --config ~/synergy.conf
+else
+    /usr/bin/synergyc aleph1
+fi
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
