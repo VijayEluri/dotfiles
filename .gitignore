@@ -8,3 +8,12 @@ auto-save-list
 .gitconfig
 tramp
 url/cookies
+
+TAGS
+tags
+cscope.*
+
+*.o
+*.out
+
+*.class

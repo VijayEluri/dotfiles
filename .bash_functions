@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# shopt -s huponexit
+# function background() {
+#     kill -s SIGTSTP $1
+#     bg
+#     disown
+# }
+
 function backup() {
-    cp $1{,.bak}
+    cp $1{,.backup}
 }
 
 function recover() {
@@ -10,18 +17,26 @@ function recover() {
     cp $path $1.recovered
 }
 
-function jstackp() {
-    jstack $(jps | grep $1 | gawk '{ print $1 }')
+function google() {
+    firefox https://www.google.com/search?q=$(echo $@ | sed 's/\ /+/g')
 }
 
-function jkillp() {
-    kill -9 $(jps | grep $1 | gawk '{ print $1 }')
+function review() {
+    (head ; tail) <$1
 }
 
-function fixless() {
+function colreview() {
+    review $1 | column -t
+}
+
+function colview() {
+    column -s, -t $1 | less
+}
+
+function fixview() {
     cat $1 | tr "\001" "|" | strings | less
 }
 
-function dbselect() {
-    sqsh -S Schema -U "username" -P "password" -C "$1"
+function dbquery() {
+    sqsh -S "schema" -U "username" -P "password" -C "$1"
 }

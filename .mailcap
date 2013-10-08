@@ -1,6 +1,7 @@
+application/gzip; /usr/bin/zcat %s
 application/pdf; /usr/bin/evince %s
-image/gif;  /usr/bin/display %s
-image/jpg;  /usr/bin/display %s
-image/jpeg; /usr/bin/display %s
-image/png;  /usr/bin/display %s
+application/postscript; /usr/bin/gv %s
+application/x-dvi; /usr/bin/evince %s
+image/*; /usr/bin/display %s
 text/html; /usr/bin/w3m -I %{charset} -T text/html -dump; copiousoutput
+text/plain; /usr/bin/less %s

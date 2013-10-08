@@ -11,3 +11,8 @@ set noic
 
 " Abbreviations
 abbr hte the
+
+" Other
+syntax on
+set number
+set relativenumber
