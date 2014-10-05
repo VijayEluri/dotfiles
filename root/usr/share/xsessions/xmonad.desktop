@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Xmonad
-Comment=This session logs you into Xmonad
-Exec=/usr/bin/xmonad
-# Type=Application
-Type=XSession
-Encoding=UTF-8
