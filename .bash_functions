@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # shopt -s huponexit
+#
 # function background() {
 #     kill -s SIGTSTP $1
 #     bg
@@ -18,7 +19,7 @@ function recover() {
 }
 
 function google() {
-    firefox https://www.google.com/search?q=$(echo $@ | sed 's/\ /+/g')
+    elinks https://www.google.com/search?q=$(echo $@ | sed 's/\ /+/g')
 }
 
 # TODO

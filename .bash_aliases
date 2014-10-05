@@ -22,7 +22,7 @@ alias lt="ll -tr"
 alias mkdir="mkdir -p"
 alias rmdir="rm -rf"
 alias shred="shred -zu"
-alias trash="mv -t ~/.trash"
+alias cycle="mv -t ~/.trash"
 
 # alias grep="ack"
 alias grep="grep --color=auto"
@@ -30,10 +30,10 @@ alias xargs="xargs -P4"
 alias locate="slocate"
 
 alias df="df -ah --total"
-alias du="du -sh --total"
+# alias du="du -sh --total"
 alias free="free -ht"
-alias pp="ps -eFly"
-alias pt="ps -eLf"
+# alias pp="ps -eFly"
+# alias pt="ps -eLf"
 # alias pstree="pstree"
 alias top="htop"
 
@@ -41,12 +41,13 @@ alias top="htop"
 # procps: vmstat
 # alias vmstat="vmstat -S M"
 
-# alias ifconfig="ip addr"
+# iproute2:
+# alias ifconfig="ip address"
 # alias nameif="ip link"
-# alias arp="ip neigh"
+# alias arp="ip neighbor"
 # alias route="ip route"
 # alias iptunnel="ip tunnel"
-# alias ipmaddr="ip maddr"
+# alias ipmaddr="ip maddress"
 # alias iwconfig="iw dev wlan0 link"
 # alias netstat="ss"
 # alias nslookup="dig; host; whois"
@@ -62,58 +63,52 @@ alias top="htop"
 # alias kismet="sudo kismet"
 
 # alias wget="curl -O"
-alias wgetr="wget -r -nc -p -E -k -np"
+# alias mirror="wget -r -nc -p -E -k -np"
 
-alias sshrsa="ssh -N -f -q shellrsa; ssh phua-66004"
+alias clamscan="clamscan -l ~/clamscan.log -i"
 
 alias emacs="emacs --debug-init -nw"
 
 alias sbcl="rlwrap sbcl"
 alias abcl="java -jar ~/local/jars/abcl.jar"
 
-# alias gless="less -TGTAGS -t"
-# alias grless="less -TGRTAGS -t"
-
 # alias gcc="gcc -Wall -W -Wconversion -Wshadow -Wcast-qual -Wwrite-strings -g -v"
 alias gas="as"
 alias gdb="gdb -tui"
-
-alias pmap="pmap -x"
-alias ltrace="ltrace"
-alias strace="strace"
-
 alias cachegrind="valgrind --tool=cachegrind"
 alias callgrind="valgrind --tool=callgrind"
+
+alias pmap="pmap -x"
+# alias ltrace="ltrace"
+# alias strace="strace"
+
+alias java="java -server"
+alias jprof="java -agentlib:hprof"
+alias jps="jps -lmvV"
+alias jstatd="jstatd -J-Djava.security.policy=/path/to/jstatd.all.policy"
+alias er_print="rlwrap er_print"
+jstackp() { jstack $(jps | grep $1 | awk '{ print $1 }'); }
+
+alias jasmin="java -jar ~/local/jasmin-2.4/jasmin.jar"
+alias cfr="java -jar ~/local/jars/cfr_0_79.jar"
+alias procyon="java -jar ~/local/jars/procyon-decompiler-0.5.25.jar"
 
 alias python="python2"
 alias ipython="ipython2"
 # alias pystall="python setup.py install --home=~/local"
 
-alias java="java -server"
-alias jprof="java -agentlib:hprof"
-alias jps="jps -lmvV"
-
-jstackp() { jstack $(jps | grep $1 | awk '{ print $1 }'); }
-jkillp() { kill -9 $(jps | grep $1 | awk '{ print $1 }'); }
-
-alias jstatd="jstatd -J-Djava.security.policy=/path/to/jstatd.all.policy"
-alias er_print="rlwrap er_print"
-
-# jad mocha krakatau
-alias jasmin="java -jar ~/local/jasmin-2.4/jasmin.jar"
-alias cfr="java -jar ~/local/jars/cfr_0_79.jar"
-alias procyon="java -jar ~/local/jars/procyon-decompiler-0.5.25.jar"
-
 # TODO
 
-alias usync="rsync -a --delete ~/workspaces ~/mnt/usb"
-# alias async="rsync -a --delete -e ssh /home/phua/workspaces/linux/dotfiles phua@aleph0:/home/phua/workspaces/linux"
+# alias sshrsa="ssh -N -f -q shellrsa; ssh phua-66004"
+
+alias usbsync="rsync -a --delete ~/workspaces ~/mnt/usb"
+alias sshsync="rsync -a --delete -e ssh /home/phua/workspaces phua@aleph0:/home/phua"
 
 alias mount="sudo mount -o uid=phua,gid=phua"
 alias umount="sudo umount"
 
-alias fmount="sshfs phua@aleph0:/mnt/dram ~/aleph0"
-alias fumount="fusermount -u ~/aleph0"
+alias sshmount="sshfs phua@aleph0:/mnt/dram ~/mnt/aleph0"
+alias sshumount="fusermount -u ~/mnt/aleph0"
 
 alias record="growisofs -Z /dev/sr0 -r -J -allow-limited-size"
 alias isorecord="cdrecord -v dev=/dev/sr0"
@@ -127,5 +122,3 @@ ncstreamer() { cat $1 | nc -l -p 8080; }
 
 alias fics="xboard -ics -icshost freechess.org"
 alias chess="xboard -fcp /usr/bin/gnuchess --xboard -fd /usr/local/bin -scp /usr/local/bin/gnuchess --xboard -sd /usr/local/bin"
-
-alias clamscan="clamscan -l ~/clamscan.log -i"

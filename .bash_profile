@@ -2,6 +2,8 @@
 
 set -o emacs
 
+shopt -s cdspell checkjobs checkwinsize dirspell extdebug globstar histappend
+
 # export DISPLAY=:0.0
 export EDITOR="/usr/bin/emacsclient -t"
 export HISTCONTROL=ignoreboth
@@ -14,8 +16,6 @@ export MAIL=$HOME/Mail
 # export SUDO_EDITOR="/usr/bin/emacsclient -t"
 # export TERM="rxvt-unicode-256color"
 # export VISUAL="/usr/bin/emacsclient -t"
-
-shopt -s cdspell checkjobs checkwinsize dirspell extdebug globstar histappend
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -34,7 +34,7 @@ export PYTHON_HOME=/usr
 export R_HOME=/usr/lib/R
 export SOLARISSTUDIO_HOME=$HOME/local/SolarisStudio
 
-export PATH=$HOME/local/bin:$ABCL_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$HADOOP_HOME/bin:$JAVA_HOME/bin:$JAVACC_HOME/bin:$MAVEN_HOME/bin:$R_HOME/bin:$PATH
+export PATH=$HOME/local/bin:$ABCL_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANT_HOME/bin:$CATALINA_HOME/bin:$ECLIPSE_HOME:$HADOOP_HOME/bin:$JAVA_HOME/bin:$JAVACC_HOME/bin:$R_HOME/bin:$PATH
 
 export INFOPATH=$HOME/local/share/info:$INFOPATH
 export MANPATH=$HOME/local/share/man:$MANPATH
@@ -47,17 +47,14 @@ export MANPATH=$HOME/local/share/man:$MANPATH
 # export LIBRARY_PATH=$HOME/local/lib
 export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
 
-export PYTHONPATH=$HOME/local/lib/python2.7/site-packages
-
 export CLASSPATH=$(find $HOME/local/jars/ -type f -name "*.jar" -printf "%p:\n" | sort -u | tr -d '\n')$CLASSPATH
 
-# export WORKSPACE=$HOME/workspaces
-# export GTAGSLIBPATH=$WORKSPACE/java/HelloWorld
+export PYTHONPATH=$HOME/local/lib/python2.7/site-packages
 
 source $HOME/.bashrc
 
 eval `/usr/bin/keychain --clear --eval --agents ssh,gpg ~/.ssh/id_ecdsa KEYS`
 
 umask 077
-# ulimit -c unlimited
+ulimit -c unlimited
 # stty -ixon
