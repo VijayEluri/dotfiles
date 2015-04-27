@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Collections.addAll(Collection<? super T> c, T... elements);
+# key: addAll
+# group: collections.algorithms
+# contributor: phua
+# --
+Collections.addAll(${c}, ${elements});

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (length ...)
+# key: length
+# group: vectors
+# contributor: phua
+# --
+(length $1)

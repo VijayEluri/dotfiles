@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: new Runnable() { ... }
+# key: newRunnable
+# group: concurrent
+# contributor: phua
+# --
+new Runnable() {
+    public void run() {
+        $0
+    }
+}

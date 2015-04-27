@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: catch (...) { ... }
+# key: catch
+# group: exceptions
+# contributor: phua
+# --
+catch (final ${Exception} ${e}) { $0 }

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: @Override public boolean equals(final Object o) { ... }
+# key: equals
+# group: methods
+# contributor: phua
+# --
+@Override public boolean equals(final Object o) {
+    return ${this.equals(o)};
+}

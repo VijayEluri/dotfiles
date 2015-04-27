@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (cons ...)
+# key: cons
+# group: lists
+# contributor: phua
+# --
+(cons $1 $2)

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: @Override public int compareTo(T o) { ... }
+# key: compareTo
+# group: methods
+# contributor: phua
+# --
+@Override public int compareTo(final ${1:T} ${2:o}) {
+    return ${this.compareTo($2)};
+}

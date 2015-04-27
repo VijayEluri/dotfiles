@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: public abstract class ... { ... }
+# key: abstract
+# group: data-types
+# contributor: phua
+# --
+public abstract class ${1:A} {
+    public $1($2) {
+        $0
+    }
+}

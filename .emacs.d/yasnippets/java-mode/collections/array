@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: final E[] array = new ...
+# key: array
+# group: collections
+# contributor: phua
+# --
+final ${1:Object}[] ${array} = new $1[${10}];

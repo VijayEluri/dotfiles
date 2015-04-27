@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (mapcar ...)
+# key: mapcar
+# group: lists
+# contributor: phua
+# --
+(mapcar $1 $0)

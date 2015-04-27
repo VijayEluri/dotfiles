@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: public enum ... { ... }
+# key: enum
+# group: data-types
+# contributor: phua
+# --
+public enum ${E} {
+    $0
+}

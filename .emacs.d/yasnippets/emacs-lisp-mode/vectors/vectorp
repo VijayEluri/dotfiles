@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (vectorp ...)
+# key: vectorp
+# group: vectors
+# contributor: phua
+# --
+(vectorp $1)

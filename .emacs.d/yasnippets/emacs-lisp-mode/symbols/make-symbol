@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (make-symbol ...)
+# key: make-symbol
+# group: symbols
+# contributor: phua
+# --
+(make-symbol ${1:S})

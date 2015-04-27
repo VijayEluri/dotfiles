@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: throw new ...;
+# key: throw
+# group: exceptions
+# contributor: phua
+# --
+throw new ${Exception}($0);

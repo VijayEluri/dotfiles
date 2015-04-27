@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Collections.swap(List<?> list, int i, int j);
+# key: swap
+# group: collections.algorithms
+# contributor: phua
+# --
+Collections.swap(${list}, ${i}, ${j});

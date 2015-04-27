@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: for (final E e : c) { ... }
+# key: foreach
+# group: collections.iterators
+# contributor: phua
+# --
+for (final ${1:Object} ${2:object} : ${3:$2`(concat yas-text "s")`}) {
+    $0
+}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: public static final ...
+# key: psf
+# contributor: phua
+# --
+public static final ${Object} ${object} = $0;

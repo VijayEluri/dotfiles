@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: finally { ... }
+# key: finally
+# group: exceptions
+# contributor: phua
+# --
+finally { $0 }

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (aref ...)
+# key: aref
+# group: vectors
+# contributor: phua
+# --
+(aref ${1:vec} ${2:i})

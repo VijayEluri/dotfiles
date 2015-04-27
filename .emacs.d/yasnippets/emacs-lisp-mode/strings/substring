@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (substring ...)
+# key: substring
+# group: strings
+# contributor: phua
+# --
+(substring ${1:string} ${2:from} ${3:to})

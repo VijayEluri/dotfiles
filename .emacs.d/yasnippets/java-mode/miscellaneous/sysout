@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: System.out.println(...);
+# key: sysout
+# contributor: phua
+# --
+System.out.println("$0");

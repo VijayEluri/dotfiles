@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: public interface ... { ... }
+# key: interface
+# group: data-types
+# contributor: phua
+# --
+public interface ${I} {
+    $0
+}

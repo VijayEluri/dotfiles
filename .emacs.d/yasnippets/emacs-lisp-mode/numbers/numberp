@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (numberp ...)
+# key: numberp
+# group: numbers
+# contributor: phua
+# --
+(numberp $1)

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: @Override protected void finalize() { ... }
+# key: finalize
+# group: methods
+# contributor: phua
+# --
+@Override protected void finalize() throws Throwable {
+    $0
+}

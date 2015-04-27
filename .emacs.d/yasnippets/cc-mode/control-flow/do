@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: do { ... } while (...);
+# key: do
+# group: control-flow
+# contributor: phua
+# --
+do {
+    $0
+} while ($1);

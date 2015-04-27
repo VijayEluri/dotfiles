@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: for (final Iterator<E> iter = c.iterator(); iter.hasNext();) { ... }
+# key: foriter
+# group: collections.iterators
+# contributor: phua
+# --
+for (final Iterator<${1:Object}> iter = ${2:objects}.iterator(); iter.hasNext();) {
+    final $1 ${3:object} = iter.next();
+    $0
+}

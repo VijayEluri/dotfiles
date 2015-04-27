@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: @Override protected Object clone() { ... }
+# key: clone
+# group: methods
+# contributor: phua
+# --
+@Override protected Object clone() throws CloneNotSupportedException {
+    ${throws new CloneNotSupportedException();}
+}

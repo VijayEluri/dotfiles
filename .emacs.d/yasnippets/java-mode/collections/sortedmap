@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: final SortedMap<K, V> map = new ...
+# key: sortedmap
+# group: collections
+# contributor: phua
+# --
+final SortedMap<${1:Object}, ${2:Object}> ${map} = new ${TreeMap}<$1, $2>();

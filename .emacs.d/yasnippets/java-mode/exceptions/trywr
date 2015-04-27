@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: try (...) { ... }
+# key: trywr
+# group: exceptions
+# contributor: phua
+# --
+try ($1) {
+    $0
+}

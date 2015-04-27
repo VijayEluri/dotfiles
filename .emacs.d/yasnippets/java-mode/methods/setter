@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: public T setField() { ... }
+# key: setter
+# group: methods
+# contributor: phua
+# --
+public ${1:T} set${2:Field}(final $1 ${3:$2$(concat (downcase (substring yas-text 0 1)) (substring yas-text 1))}) {
+    return this.${4:$3} = $3;
+}

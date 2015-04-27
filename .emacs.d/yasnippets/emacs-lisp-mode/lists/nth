@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (nth ...)
+# key: nth
+# group: lists
+# contributor: phua
+# --
+(nth ${1:i} ${2:lst})

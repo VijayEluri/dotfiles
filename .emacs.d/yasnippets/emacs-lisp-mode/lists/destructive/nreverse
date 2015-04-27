@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (nreverse ...)
+# key: nreverse
+# group: lists.destructive
+# contributor: phua
+# --
+(nreverse $0)

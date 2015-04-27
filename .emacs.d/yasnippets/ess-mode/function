@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: fun = function(...) { ... }
+# key: function
+# group: control-flow
+# contributor: phua
+# --
+function($1) {
+    $0
+    return ($2)
+}

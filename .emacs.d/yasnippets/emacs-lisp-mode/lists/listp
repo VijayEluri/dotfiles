@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (listp ...)
+# key: listp
+# group: lists
+# contributor: phua
+# --
+(listp $1)

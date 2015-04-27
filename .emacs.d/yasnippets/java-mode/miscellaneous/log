@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: logger.log(...);
+# key: log
+# contributor: phua
+# --
+${logger}.${$$(yas-choose-value '("debug" "info" "warn" "error" "fatal"))}("$0");
