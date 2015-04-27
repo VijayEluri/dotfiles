@@ -1,38 +1,101 @@
-* Basics
-$ git config --global user.name phua
-$ git config --global user.email phua@aleph0
-** Creating a new repository
-$ mkdir REPOSITORY
-$ cd REPOSITORY
-$ git init
-$ touch README
-$ git add README
-$ git commit -m 'first commit'
-$ git remote add origin git@github.com:phua/REPOSITORY.git
-$ git push origin master
-** Adding an existing repository
-$ cd REPOSITORY
-$ git remote add origin git@github.com:phua/REPOSITORY.git
-$ git push origin master
-** Forking a repository
-*** Cloning
-$ git clone git@github.com:USER/REPOSITORY.git
-$ cd REPOSITORY
-*** Remoting
-$ git remote add upstream git@github.com:USER/REPOSITORY.git
-$ git fetch upstream
-*** Pushing
-$ git origin push master
-*** Pulling
-$ git fetch upstream
-$ git merge upstream/master
+;; -*- mode: org -*-
 
-$ git pull upstream
-** Branching
-$ git branch BRANCH
-$ git checkout BRANCH
+* Installation
 
-$ git checkout -b BRANCH
-* Advanced
-** Purging from a repository
-$ find . -type d -name ".svn" -exec git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch {}' --force HEAD \;
+$ git clone git@github.com:phua/dotfiles.git /path/to/dotfiles
+
+$ ln -sf /path/to/dotfiles{/private,}/{.[!.]*,*} ~
+
+* Git Basics
+
+Configure git.
+
+#+BEGIN_SRC sh
+git config --global user.name phua
+git config --global user.email phua@aleph0
+git config --global color.ui auto
+
+# git config --global sslcainfo ...
+# git config --global autocrlf false
+#+END_SRC
+
+#+BEGIN_SRC sh
+USER="phua"
+REPOSITORY="Example"
+#+END_SRC
+
+Create new repository...
+
+#+BEGIN_SRC sh
+mkdir -p $REPOSITORY && cd $REPOSITORY
+git init
+touch README
+git commit -a -m 'first commit'
+#+END_SRC
+
+...and push repository upstream...
+
+#+BEGIN_SRC sh
+git remote add origin git@github.com:$USER/$REPOSITORY.git
+git push -u origin master
+#+END_SRC
+
+...or clone existing repository.
+
+#+BEGIN_SRC sh
+git clone git@github.com:$USER/$REPOSITORY.git
+#+END_SRC
+
+Rebase from upstream/master...
+
+#+BEGIN_SRC sh
+# git fetch upstream && git merge upstream/master
+# git pull upstream master
+git pull --rebase upstream master
+#+END_SRC
+
+...and push to origin/master.
+
+#+BEGIN_SRC sh
+git push origin master
+#+END_SRC
+
+* Commands Workflow
+
+Create...
+
+git [init|clone]
+
+Browse...
+
+git [status|log|show|diff|branch|blame]
+
+Revert...
+
+git [reset|checkout|revert]
+
+Update...
+
+git [pull|fetch|merge|am]
+
+Branch...
+
+git [checkout|branch]
+
+Commit...
+
+git commit
+
+Publish...
+
+git [push|format-patch|tag]
+
+Other...
+
+git [bisect|fsck|gc|grep]
+
+gitk, git gui, git instaweb
+
+Purging...
+
+find . -type d -name ".svn" -exec git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch {}' --force HEAD \;
