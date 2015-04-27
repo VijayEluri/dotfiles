@@ -1,14 +1,22 @@
+local
+private
+
 *~
 \#*
 auto-save-list
 .backups
 *.cache
 *.elc
+elpa
 .git
 .gitconfig
+.ido.last
 tramp
 url/cookies
 
+GPATH
+GRTAGS
+GTAGS
 TAGS
 tags
 cscope.*
@@ -16,4 +24,8 @@ cscope.*
 *.o
 *.out
 
+*.pyc
+
 *.class
+
+.Rhistory

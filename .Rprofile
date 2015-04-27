@@ -1,1 +1,1 @@
-## 
+options(browser='elinks')
