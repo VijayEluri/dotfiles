@@ -30,11 +30,6 @@
 ;; M-x byte-compile-file ~/.emacs
 ;; C-u 0 M-x byte-recompile-directory ~/.emacs.d
 
-;; (mapc #'package-install
-;;       '(ascope auctex auto-complete c-eldoc clips-mode color-theme color-theme-sanityinc-solarized dired+ doctags ecb emms ess ggtags gnuplot gnuplot-mode haskell-mode helm ipython jtags jtags-extra magit paredit pymacs python-mode slime w3m yasnippet))
-;;
-;; javadoc-help, javadoc-lookup, javap, javap-mode, javarun thread-dump
-
 (setq debug-on-error t)
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
@@ -57,15 +52,15 @@
 ;; (auto-fill-mode 1)
 ;; (current-fill-column 70)
 
+;; (eldoc-mode 1)
 (show-paren-mode 1)
 ;; (setq show-paren-style 'expression)
 (electric-pair-mode 1)
 (abbrev-mode 1)
 (global-set-key "\M-/" 'hippie-expand)
-(global-set-key "\C-co" 'occur) ;; C-s M-s occur, multi-occur
+(global-set-key "\C-co" 'occur)
 
 (global-font-lock-mode 1)
-;; (eldoc-mode 1)
 (flyspell-mode 1)
 
 (set-background-color "black")
@@ -96,12 +91,91 @@
 
 (require 'cl)
 
-;; TODO
-
 (setq emacs-directory (expand-file-name "~/.emacs.d/"))
 (add-to-list 'load-path (concat emacs-directory "lisp/"))
-;; (add-to-list 'load-path (concat emacs-directory "site-lisp/"))
+(add-to-list 'load-path (concat emacs-directory "site-lisp/"))
+;; (add-to-list 'load-path "/usr/share/emacs/24.5/lisp/")
+;; (add-to-list 'load-path "/usr/share/emacs/24.5/site-lisp/")
 ;; (add-to-list 'load-path "/usr/share/emacs/site-lisp/")
+
+(setq custom-file (concat emacs-directory "/custom.el"))
+(load custom-file 'noerror)
+
+(add-to-list 'backup-directory-alist (cons "." (concat emacs-directory "/.backups")))
+
+(global-set-key (kbd "C-x C-b") 'ibuffer) ;; (defalias 'list-buffers 'ibuffer)
+
+(iswitchb-mode 1)
+;; (add-to-list 'iswitchb-buffer-ignore '("^\\*"))
+(setq iswitchb-default-method 'maybe-frame)
+
+(icomplete-mode 1)
+
+(require 'ido)
+(ido-mode 1)
+(setq ido-everywhere 1)
+(setq ido-enable-flex-matching t)
+(setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+(setq shell-file-name "/bin/bash")
+(setq shell-command-switch "-c")
+(setq explicit-shell-file-name shell-file-name)
+(setenv "SHELL" shell-file-name)
+(setenv "ESHELL" shell-file-name)
+;; (setq explicit-bash-args '("--login" "-i"))
+
+(setq tramp-backup-directory-alist backup-directory-alist)
+(setq tramp-default-method "ssh")
+
+(setq gnus-check-new-newsgroups nil)
+(setq gnus-dribble-directory emacs-directory)
+(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
+
+;; (require 'epa)
+;; (epa-file-enable)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Org
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'auto-mode-alist '("\\.org$'" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cb" 'org-iswitchb)
+
+(setq org-startup-indented t)
+(setq org-startup-folded nil)
+
+(setq org-ditaa-jar-path "/usr/share/java/ditaa/ditaa-0_9.jar")
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (lisp . t)
+   (sh . t)
+   (C . t)
+   (java .t )
+   (python . t)
+   (R . t)
+   (maxima . t)
+   (ditaa .t)))
+(setq org-confirm-babel-evaluate nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; AUCTeX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Packages
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Deprecated by ELPA.
 ;;
@@ -125,96 +199,45 @@
 ;;        (add-to-list 'load-path path)
 ;;        ,@body)))
 
-(setq custom-file (concat emacs-directory "/custom.el"))
-(load custom-file 'noerror)
-
-(add-to-list 'backup-directory-alist (cons "." (concat emacs-directory "/.backups")))
-
-(defalias 'list-buffers 'ibuffer)
-;; (global-set-key (kbd "C-x C-b") 'ibuffer)
-
-(iswitchb-mode 1)
-;; (setq iswitchb-buffer-ignore '("^ " "^\\*"))
-(setq iswitchb-default-method 'maybe-frame)
-
-(icomplete-mode 1)
-
-(require 'ido)
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
-;; (setq ido-everywhere t)
-(setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
-
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'forward)
-
-;; TODO
-(setq shell-file-name "/bin/bash")
-(setq shell-command-switch "-c")
-(setq explicit-shell-file-name shell-file-name)
-(setenv "SHELL" shell-file-name)
-(setenv "ESHELL" shell-file-name)
-(setq explicit-sh-args '("--login" "-i"))
-
-(setq tramp-backup-directory-alist backup-directory-alist)
-(setq tramp-default-method "ssh")
-
-;; TODO
-(setq gnus-check-new-newsgroups nil)
-(setq gnus-dribble-directory emacs-directory)
-(add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
-
-;; (require 'epa)
-;; (epa-file-enable)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Org
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(add-to-list 'auto-mode-alist '("\\.org$'" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-cc" 'org-capture)
-(define-key global-map "\C-ca" 'org-agenda)
-(define-key global-map "\C-cb" 'org-iswitchb)
-
-(setq org-startup-indented t)
-(setq org-startup-folded nil)
-
-(org-babel-do-load-languages 'org-babel-load-languages '((emacs-lisp . t) (lisp . t) (C . t) (java .t ) (python . t) (R . t)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Packages
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-;; (add-to-list 'package-archives '("local" . "/home/phua/.emacs.d/site-lisp/"))
+;; (add-to-list 'package-archives '("local" . "$HOME/.emacs.d/packages/"))
 
-;; TODO (color-theme-sanityinc-solarized-dark)
+(defvar my-packages
+  '(ascope auctex auto-complete c-eldoc clips-mode clojure-mode clojure-test-mode color-theme color-theme-sanityinc-solarized company dired+ doctags ecb emacs-eclim emms ess fuzzy ggtags gnuplot gnuplot-mode haskell-mode helm ipython jedi jtags jtags-extras magit paredit popup pymacs python-mode slime w3m xcscope virtualenv yasnippet))
 
-;; TODO (require 'dired+)
+(dolist (package my-packages)
+  (when (not (package-installed-p package))
+    (package-install package)))
+
+;; (color-theme-sanityinc-solarized-dark)
+
+;; (require 'dired+)
 ;; (define-key ctl-x-map   "d" 'diredp-dired-files)
 ;; (define-key ctl-x-4-map "d" 'diredp-dired-files-other-window)
 
 (require 'helm-config)
-(global-set-key (kbd "C-c h") 'helm-mini)
-(helm-mode 1)
+(global-set-key (kbd "C-c h") 'helm-mini) ;; (helm-mode 1)
 
 (setq browse-url-browser-function 'w3m-browse-url)
 (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
 (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-use-cookies nil)
 
-(mapcar #'load '("my-ac.el" "my-ys.el" "my-fn" "my-el" "my-cl" "my-cc" "my-py" "my-rr" "my-hs" "my-vc" "my-tx"))
+(mapcar #'load '("my-ac" "my-fn" "my-cl" "my-cc" "my-py" "my-rr" "my-hs" "my-vc"))
 
 (shell)
 ;; (ansi-term "/bin/bash")
 
+;; (desktop-save-mode t)
 (dired "~")
-(dired "~/workspaces/")
+(split-window-right)
+(find-file-other-window "~/workspaces/TODO")
+(split-window-below)
+(find-file-other-window "~/workspaces/mnt/media/books")
 
 ;; (w3m-goto-url-new-session "http://")
 

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (remhash ...)
+# key: remhash
+# group: collections
+# contributor: phua
+# --
+(remhash ${1:key} ${2:hash-table})

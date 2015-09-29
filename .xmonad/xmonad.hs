@@ -28,7 +28,7 @@ main = do
     focusedBorderColor = "yellow",
     startupHook = setWMName "LG3D" -- Java hack
     } `additionalKeys`
-    [ ((mod4Mask, xK_x), spawn "/usr/bin/python ~/usr/local/bin/toggle-touchpad.py"), -- M-x
+    [ ((mod4Mask, xK_x), spawn "/usr/bin/python ~/workspaces/python/touchpad/toggle-touchpad.py"), -- M-x
       ((mod4Mask .|. shiftMask, xK_z), spawn "/usr/bin/xscreensaver-command -lock"), -- M-S-z
       ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s"), -- C-PrtSc
       ((0, xK_Print), spawn "scrot")                          -- PrtSc

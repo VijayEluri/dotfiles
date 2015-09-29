@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (vector ...)
+# key: vector
+# group: collections
+# contributor: phua
+# --
+(vector $0)

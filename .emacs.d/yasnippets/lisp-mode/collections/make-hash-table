@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (make-hash-table ...)
+# key: make-hash-table
+# group: collections
+# contributor: phua
+# --
+(make-hash-table $0)

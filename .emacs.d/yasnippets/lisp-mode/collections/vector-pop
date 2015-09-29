@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (vector-pop ...)
+# key: vector-pop
+# group: collections
+# contributor: phua
+# --
+(vector-push ${1:vector})

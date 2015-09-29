@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (make-array ...)
+# key: make-array
+# group: collections
+# contributor: phua
+# --
+(make-array ${1:dimensions})
