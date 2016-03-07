@@ -2,9 +2,12 @@
 
 * Installation
 
+$ git clone https://github.com/phua/dotfiles.git /path/to/dotfiles
 $ git clone git@github.com:phua/dotfiles.git /path/to/dotfiles
 
 $ ln -sf /path/to/dotfiles{/private,}/{.[!.]*,*} ~
+
+$ stow -d /path/to/dotfiles -t $HOME bash emacs ...
 
 * Git Basics
 
