@@ -16,9 +16,9 @@ function backup() {
 
 # $ recover [/path/to/]file
 function recover() {
-    path=/proc/$(lsof | grep $1 | awk '{ print $2 }' | uniq)/fd
-    path=$path/$(ls -l $path | grep $1 | awk '{ print $(NF-2) }')
-    cp $path $1.recovered
+    FILE=/proc/$(lsof | grep $1 | awk '{ print $2 }' | uniq)/fd
+    FILE=$FILE/$(ls -l $FILE | grep $1 | awk '{ print $(NF-2) }')
+    cp $FILE $1.recovered
 }
 
 # $ google query
@@ -75,10 +75,6 @@ function cfrjar() {
 }
 
 # TODO
-
-function eclipse_project_files() {
-    find . -name .project -o -name .classpath -exec tar --append --file=projects.tar {} \;
-}
 
 function review() {
     (head ; tail) <$1

@@ -64,4 +64,5 @@ eval `/usr/bin/keychain --clear --eval --agents ssh,gpg ~/.ssh/id_ecdsa KEYS`
 
 umask 077
 ulimit -c unlimited
+
 # stty -ixon -tabs erase '^H'

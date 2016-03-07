@@ -143,6 +143,8 @@ alias chess="xboard -fcp /usr/bin/gnuchess --xboard -fd /usr/local/bin -scp /usr
 # alias pipstall="pip2 install --install-option='--prefix=$HOME/local'"
 # alias pipinstall="pip2 install --target=$HOME/local/lib/python2.7/site-packages"
 
+# alias eclipse_project="find . -name .project -o -name .classpath | xargs tar rf projects.tar"
+
 # alias wget="curl -O"
 # alias mirror="wget -r -nc -p -E -k -np"
 
