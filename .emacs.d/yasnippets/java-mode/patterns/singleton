@@ -4,15 +4,14 @@
 # group: design-patterns
 # contributor: phua
 # --
-public final class ${1:C} {
+public final class ${1:S} {
     private static final $1 instance;
 
     private $1($2) {
-        super();
         $0
     }
 
-    public $1 getInstance() {
+    public static $1 getInstance() {
         return instance;
     }
 }

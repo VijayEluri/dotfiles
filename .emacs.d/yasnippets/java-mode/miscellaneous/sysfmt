@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: System.out.printf(...);
+# key: sysfmt
+# contributor: phua
+# --
+System.out.printf("$1", $2);

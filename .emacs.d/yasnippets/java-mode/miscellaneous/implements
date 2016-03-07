@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: assert ... : ...;
-# key: assert
+# name: implements ...
+# key: implements
 # group: keywords
 # contributor: phua
 # --
-assert $1 ${2::};
+implements ${1:Interface}

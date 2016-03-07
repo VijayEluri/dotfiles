@@ -4,6 +4,14 @@
 # group: methods
 # contributor: phua
 # --
-@Override public boolean equals(final Object o) {
-    return ${this.equals(o)};
+@Override
+public boolean equals(final Object o) {
+    if (o == this) {
+        return true;
+    }
+    if (!(o instanceof ${1:T})) {
+        return false;
+    }
+    final $1 ${2:t} = ($1) o;
+    $0
 }

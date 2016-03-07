@@ -4,6 +4,6 @@
 # group: data-types
 # contributor: phua
 # --
-public interface ${I} {
+public interface ${1:I} {
     $0
 }

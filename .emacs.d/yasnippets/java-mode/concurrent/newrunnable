@@ -1,10 +1,11 @@
 # -*- mode: snippet -*-
 # name: new Runnable() { ... }
-# key: newRunnable
+# key: newrunnable
 # group: concurrent
 # contributor: phua
 # --
 new Runnable() {
+    @Overrides
     public void run() {
         $0
     }

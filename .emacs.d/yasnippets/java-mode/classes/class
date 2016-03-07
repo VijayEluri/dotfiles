@@ -6,7 +6,6 @@
 # --
 public final class ${1:C} {
     public $1($2) {
-        super();
         $0
     }
 }

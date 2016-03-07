@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: synchronized (...) { ... }
 # key: synchronized
-# group: concurrency
+# group: concurrent
 # contributor: phua
 # --
 synchronized ($1) {

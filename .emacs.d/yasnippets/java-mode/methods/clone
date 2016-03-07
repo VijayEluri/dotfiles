@@ -4,6 +4,7 @@
 # group: methods
 # contributor: phua
 # --
-@Override protected Object clone() throws CloneNotSupportedException {
-    ${throws new CloneNotSupportedException();}
+@Override
+protected Object clone() throws CloneNotSupportedException {
+    ${1:throws new CloneNotSupportedException();}
 }

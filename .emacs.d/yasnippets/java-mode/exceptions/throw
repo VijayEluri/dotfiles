@@ -4,4 +4,4 @@
 # group: exceptions
 # contributor: phua
 # --
-throw new ${Exception}($0);
+throw new ${1:Exception}($2);

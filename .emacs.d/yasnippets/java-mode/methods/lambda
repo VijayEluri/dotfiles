@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (...) -> { ... }
+# key: lambda
+# group: methods
+# contributor: phua
+# --
+($1) -> { $0 }

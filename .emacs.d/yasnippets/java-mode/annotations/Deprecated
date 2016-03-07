@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: @Deprecated
+# key: @Deprecated
+# group: annotations
+# contributor: phua
+# --
+@Deprecated

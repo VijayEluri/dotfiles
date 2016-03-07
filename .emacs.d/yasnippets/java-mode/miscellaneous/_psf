@@ -3,4 +3,4 @@
 # key: psf
 # contributor: phua
 # --
-public static final ${Object} ${object} = $0;
+public static final ${1:Object} ${2:o} = $0;

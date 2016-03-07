@@ -4,6 +4,6 @@
 # group: collections.iterators
 # contributor: phua
 # --
-for (final ${1:Object} ${2:object} : ${3:$2`(concat yas-text "s")`}) {
+for (final ${1:E} ${2:e} : ${3:$2`(concat yas-text "s")`}) {
     $0
 }

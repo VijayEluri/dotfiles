@@ -4,4 +4,4 @@
 # group: keywords
 # contributor: phua
 # --
-$1 instanceof $2;
+${1:o} instanceof ${2:T}

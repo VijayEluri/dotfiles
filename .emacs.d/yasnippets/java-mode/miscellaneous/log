@@ -3,4 +3,4 @@
 # key: log
 # contributor: phua
 # --
-${logger}.${$$(yas-choose-value '("debug" "info" "warn" "error" "fatal"))}("$0");
+${1:logger}.${2:$$(yas-choose-value '("debug" "info" "warn" "error" "fatal"))}("$3");

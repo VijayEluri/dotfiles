@@ -4,6 +4,7 @@
 # group: methods
 # contributor: phua
 # --
-@Override protected void finalize() throws Throwable {
+@Override
+protected void finalize() throws Throwable {
     $0
 }

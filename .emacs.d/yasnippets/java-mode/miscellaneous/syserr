@@ -3,4 +3,4 @@
 # key: syserr
 # contributor: phua
 # --
-System.err.println("$0");
+System.err.println("$1");

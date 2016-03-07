@@ -4,8 +4,9 @@
 # group: methods
 # contributor: phua
 # --
-@Override public String toString() {
+@Override
+public String toString() {
     final StringBuilder builder = new StringBuilder();
-    $0
+    builder.append($0);
     return builder.toString();
 }

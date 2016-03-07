@@ -4,4 +4,4 @@
 # group: exceptions
 # contributor: phua
 # --
-throws ${Exception}
+throws ${1:Exception}

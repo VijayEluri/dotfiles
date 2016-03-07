@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: @SuppressWarnings(...)
+# key: @SuppressWarnings
+# group: annotations
+# contributor: phua
+# --
+@SuppressWarnings("${1:$$(yas-choose-value '("deprecation" "unchecked"))}")

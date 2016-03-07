@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: @Override
+# key: @Override
+# group: annotations
+# contributor: phua
+# --
+@Override

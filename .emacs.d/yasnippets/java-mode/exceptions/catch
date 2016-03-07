@@ -4,4 +4,6 @@
 # group: exceptions
 # contributor: phua
 # --
-catch (final ${Exception} ${e}) { $0 }
+catch (final ${1:Exception} ${2:e}) {
+    ${3:$2.printStackTrace();}
+}

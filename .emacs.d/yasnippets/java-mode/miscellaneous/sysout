@@ -3,4 +3,4 @@
 # key: sysout
 # contributor: phua
 # --
-System.out.println("$0");
+System.out.println("$1");

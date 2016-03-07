@@ -4,4 +4,6 @@
 # group: exceptions
 # contributor: phua
 # --
-finally { $0 }
+finally {
+    $0
+}

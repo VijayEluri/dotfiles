@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: public static void main(final String[] args) { ... }
+# name: public static void main(String[] args) { ... }
 # key: main
 # contributor: phua
 # --
