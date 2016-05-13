@@ -31,11 +31,21 @@ function torfox() {
     $HOME/local/tor-browser_en-US/Browser/start-tor-browser --detach
 }
 
+# $ xkcd [id]
 function xkcd() {
-    IMG=($(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | awk -F \" '/<img src=".*" title=".*" .* \/>/ { OFS="," ; print $2, $4 }'))
+    # IMG=($(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | awk -F \" '/<img src=".*" title=".*" alt=".*" \/>/ { OFS=","; print $2, $4 }'))
+    #
+    # feh http:${IMG[0]}
+    # echo ${IMG[1]} | recode HTML
 
-    feh http:${IMG[0]}
-    echo ${IMG[1]} | recode HTML
+    IMG=$(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | grep "<img")
+    LINT="xmllint --xpath \"/img/@%s\" - <<<\$IMG | awk -F \\\\\" '{ print \$2 }'"
+    SRC=$(eval `printf "$LINT" "src"`)
+    TITLE=$(eval `printf "$LINT" "title"`)
+    ALT=$(eval `printf "$LINT" "alt"`)
+
+    echo $ALT: $TITLE | recode HTML
+    feh http:$SRC
 }
 
 # TODO .gitconfig
