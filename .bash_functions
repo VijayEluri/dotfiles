@@ -40,12 +40,12 @@ function xkcd() {
 
     IMG=$(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | grep "<img")
     LINT="xmllint --xpath \"/img/@%s\" - <<<\$IMG | awk -F \\\\\" '{ print \$2 }'"
-    SRC=$(eval `printf "$LINT" "src"`)
+    SRC=http:$(eval `printf "$LINT" "src"`)
     TITLE=$(eval `printf "$LINT" "title"`)
     ALT=$(eval `printf "$LINT" "alt"`)
 
     echo $ALT: $TITLE | recode HTML
-    feh http:$SRC
+    feh $SRC
 }
 
 # TODO .gitconfig
