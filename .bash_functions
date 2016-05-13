@@ -31,6 +31,13 @@ function torfox() {
     $HOME/local/tor-browser_en-US/Browser/start-tor-browser --detach
 }
 
+function xkcd() {
+    IMG=($(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | awk -F \" '/<img src=".*" title=".*" .* \/>/ { OFS="," ; print $2, $4 }'))
+
+    feh http:${IMG[0]}
+    echo ${IMG[1]} | recode HTML
+}
+
 # TODO .gitconfig
 function git_rebase_upstream_master() {
     CURRENT_BRANCH=$(git branch | grep '^* ' | awk '{ print $2 }')
@@ -48,8 +55,9 @@ function git_rebase_upstream_master() {
     git stash pop
 
     ctags -e -R .
-    (cd / && find $1 -name "*.$2" > $1/cscope.files) ; cscope -b -q
+    # CWD=$(realpath .) (cd / && find $CWD -name "*.java" > $CWD/cscope.files) ; cscope -b -q
     gtags
+    mkid
 }
 
 # $ jstackp process
@@ -84,8 +92,8 @@ function colreview() {
     review $1 | column -t
 }
 
-function colview() {
-    column -s, -t $1 | less
+function csvview() {
+    column -s, -t <$1 | less # [-N -#2]
 }
 
 function fixview() {
