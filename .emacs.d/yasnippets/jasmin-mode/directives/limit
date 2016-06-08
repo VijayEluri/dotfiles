@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .limit
+# key: .limit
+# group: directives
+# contributor: phua
+# --
+.limit ${1:$$(yas-choose-value '("stack" "locals"))} ${2:1}

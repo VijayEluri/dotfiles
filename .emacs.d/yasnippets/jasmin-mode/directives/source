@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .source
+# key: .source
+# group: directives
+# contributor: phua
+# --
+.source "${1:`(file-relative-name (buffer-file-name) ".")`}"

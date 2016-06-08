@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .throws
+# key: .throws
+# group: directives
+# contributor: phua
+# --
+.throws ${1:java/lang/Exception}
