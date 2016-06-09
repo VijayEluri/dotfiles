@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: invokevirtual
+# key: invokevirtual
+# group: instructions
+# contributor: phua
+# --
+invokevirtual ${1:class}/${2:method}(${3:descriptor})${4:V}

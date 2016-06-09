@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: invokestatic
+# key: invokestatic
+# group: instructions
+# contributor: phua
+# --
+invokestatic ${1:class}/${2:method}(${3:descriptor})${4:V}

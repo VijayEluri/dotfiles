@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: iinc
+# key: iinc
+# group: instructions
+# contributor: phua
+# --
+iinc ${1:index} ${2:const}

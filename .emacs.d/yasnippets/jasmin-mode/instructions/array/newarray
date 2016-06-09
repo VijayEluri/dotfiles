@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: newarray
+# key: newarray
+# group: instructions
+# contributor: phua
+# --
+newarray ${1:atype}

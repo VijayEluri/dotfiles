@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: new
+# key: new
+# group: instructions
+# contributor: phua
+# --
+new ${1:C}

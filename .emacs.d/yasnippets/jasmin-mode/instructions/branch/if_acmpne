@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: if_acmpne
+# key: if_acmpne
+# group: instructions
+# contributor: phua
+# --
+if_acmpne ${1:branch}

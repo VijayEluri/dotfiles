@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: goto_w
+# key: goto_w
+# group: instructions
+# contributor: phua
+# --
+goto_w ${1:branch}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: multianewarray
+# key: multianewarray
+# group: instructions
+# contributor: phua
+# --
+multianewarray ${1:descriptor} ${2:dimensions}

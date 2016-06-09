@@ -4,7 +4,7 @@
 # group: directives
 # contributor: phua
 # --
-.method ${1:$$(yas-choose-value '("public" "protected" "private" ""))} ${2:method}(${3:descriptor})${4:V}
+.method ${1:$$(yas-choose-value '("public" "protected" "private" ""))} ${2:method-name}(${3:descriptor})${4:V}
     $0
 
     return

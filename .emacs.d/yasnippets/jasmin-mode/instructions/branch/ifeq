@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ifeq
+# key: ifeq
+# group: instructions
+# contributor: phua
+# --
+ifeq ${1:branch}

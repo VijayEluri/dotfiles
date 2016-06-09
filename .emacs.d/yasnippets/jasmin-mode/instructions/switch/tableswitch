@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: tableswitch
+# key: tableswitch
+# group: instructions
+# contributor: phua
+# --
+tableswitch ${1:0}
+    ${2:Label0}
+    $0
+    default : ${3:LabelN}
+
+$2 :
+
+$3 :

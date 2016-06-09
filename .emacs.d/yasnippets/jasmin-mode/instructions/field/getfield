@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: getfield
+# key: getfield
+# group: instructions
+# contributor: phua
+# --
+getfield ${1:class}/${2:field} ${3:descriptor}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: if_icmple
+# key: if_icmple
+# group: instructions
+# contributor: phua
+# --
+if_icmple ${1:branch}
