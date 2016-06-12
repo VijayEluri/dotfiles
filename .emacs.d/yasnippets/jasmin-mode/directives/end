@@ -4,4 +4,4 @@
 # group: directives
 # contributor: phua
 # --
-.end
+.end ${1:$$(yas-choose-value '("class" "field" "method"))}

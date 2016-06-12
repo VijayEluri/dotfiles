@@ -4,7 +4,7 @@
 # group: data-types
 # contributor: phua
 # --
-public enum ${1:E} {
+public enum ${1:`(file-name-sans-extension (file-relative-name (buffer-file-name) "."))`} {
     { $2 }
 
     public $1($3) {

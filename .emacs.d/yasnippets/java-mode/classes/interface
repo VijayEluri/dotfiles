@@ -4,6 +4,6 @@
 # group: data-types
 # contributor: phua
 # --
-public interface ${1:I} {
+public interface ${1:`(file-name-sans-extension (file-relative-name (buffer-file-name) "."))`} {
     $0
 }

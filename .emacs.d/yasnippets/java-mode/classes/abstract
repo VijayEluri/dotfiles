@@ -4,7 +4,7 @@
 # group: data-types
 # contributor: phua
 # --
-public abstract class ${1:A} {
+public abstract class ${1:`(file-name-sans-extension (file-relative-name (buffer-file-name) "."))`} {
     public $1($2) {
         $0
     }
