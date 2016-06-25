@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: invokenonvirtual
-# key: invokenonvirtual
+# name: invokespecial
+# key: invokespecial
 # group: instructions
 # contributor: phua
 # --

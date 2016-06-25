@@ -4,4 +4,6 @@
 # group: instructions
 # contributor: phua
 # --
-newarray ${1:atype}
+ldc ${2:count}
+newarray ${1:$$(yas-choose-value '("boolean" "char" "float" "double" "byte" "short" "int" "long"))}
+$0

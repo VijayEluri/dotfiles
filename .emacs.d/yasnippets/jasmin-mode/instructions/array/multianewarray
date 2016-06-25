@@ -4,4 +4,7 @@
 # group: instructions
 # contributor: phua
 # --
-multianewarray ${1:descriptor} ${2:dimensions}
+$0${3:$2$(let (value)
+           (dotimes (number (string-to-number yas-text) (mapconcat '(lambda (x) x) value "\n"))
+             (setq value (cons "ldc" value))))}
+multianewarray ${1:type} ${2:dimensions}

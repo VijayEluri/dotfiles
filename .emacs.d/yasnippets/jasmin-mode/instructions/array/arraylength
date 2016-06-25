@@ -1,9 +1,9 @@
 # -*- mode: snippet -*-
-# name: anewarray
-# key: anewarray
+# name: arraylength
+# key: arraylength
 # group: instructions
 # contributor: phua
 # --
-ldc ${2:count}
-anewarray ${1:C}
+aload ${1:arrayref}
+arraylength
 $0

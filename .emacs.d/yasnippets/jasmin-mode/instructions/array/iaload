@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name: anewarray
-# key: anewarray
+# name: iaload
+# key: iaload
 # group: instructions
 # contributor: phua
 # --
-ldc ${2:count}
-anewarray ${1:C}
+aload ${1:arrayref}
+iload ${2:index}
+iaload
 $0
