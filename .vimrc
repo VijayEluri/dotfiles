@@ -1,7 +1,7 @@
 set nocompatible
 filetype plugin indent on
 
-set guioptions-=mTL
+set guioptions-=mTLl
 
 set ruler
 set incsearch

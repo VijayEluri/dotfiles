@@ -19,16 +19,20 @@ fi
 /usr/bin/xcompmgr -c &
 /usr/bin/stalonetray &
 /usr/bin/xmodmap ~/.Xmodmap &
+# /usr/bin/xautolock -time 10 -locker slock &
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
-/usr/bin/ibus-daemon --xim &
+export QT_IM_MODULE=ibus
+/usr/bin/ibus-daemon --xim -dr &
 
-if [ $HOSTNAME == "aleph1" ]
-then
-    /usr/bin/synergys --config ~/synergy.conf
-else
-    /usr/bin/synergyc aleph1
-fi
+# if [ $HOSTNAME == "aleph1" ]
+# then
+#     /usr/bin/synergys --config ~/synergy.conf
+# else
+#     /usr/bin/synergyc aleph1
+# fi
+
+# /usr/bin/VBoxClient-all
 
 exec /usr/bin/xmonad

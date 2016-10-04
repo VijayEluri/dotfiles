@@ -99,10 +99,13 @@ screen -t mail 3 mutt
 screen -t chat 4 irssi -c localhost -p 6667
 screen -t inet 5 elinks https://www.google.com/
 screen -t news 6 newsbeuter
-screen -t beat 7 cmus
-# screen -t beat 7 pianobar
+screen -t unet 7 slrn -h news.gmane.org -f .jnewsrc
+# screen -t beat 8 cmus
+# screen -t beat 8 pianobar
 # screen -t bits 8 rtorrent
 screen -t imap 9 offlineimap
+select 3
+monitor
 select 0
 
 hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
