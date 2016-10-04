@@ -65,6 +65,7 @@ alias nslookup="dig"            # host whois
 # alias nc="netcat"
 alias tcpdump="sudo tcpdump"
 alias tshark="sudo tshark"
+# alias tcpflow="tcpflow"
 # alias nmap="sudo nmap"
 # alias kismet="sudo kismet"
 # alias airmon="sudo airmon-ng"
@@ -73,6 +74,7 @@ alias tshark="sudo tshark"
 alias clamscan="clamscan -l /tmp/clamscan.log -i"
 
 alias svndiff="svn diff --diff-cmd diff -x -b"
+# alias patch="patch -p0 <FILE"
 
 alias sbcl="rlwrap sbcl"
 alias abcl="java -jar $HOME/local/jars/abcl.jar"
@@ -94,6 +96,7 @@ alias er_print="rlwrap er_print"
 alias jfr="java -XX:+UnlockCommercialFeatures -XX:+FlightRecorder" # " -XX:StartFlightRecording=duration=60s,filename=myrecording.jfr"
 
 alias jasmin="java -jar $HOME/local/jasmin-2.4/jasmin.jar"
+alias dejasmin="java -cp $(find $HOME/local/tinapoc-0.4-alpha/bin -name "*.jar" -printf "%p:") dejasmin"
 alias jd="java -jar $HOME/local/jars/jd-gui.jar"
 alias cfr="java -jar $HOME/local/jars/cfr.jar"
 alias procyon="java -jar $HOME/local/jars/procyon-decompiler.jar"
@@ -106,13 +109,17 @@ alias pip="pip2"
 alias kali32="qemu-system-i386 -enable-kvm -net nic -net user ~/mnt/kali/kali-i386.img"
 alias kali64="qemu-system-x86_64 -enable-kvm -net nic -net vde ~/mnt/kali/kali-x86_64.img"
 
+# alias sshdroid="ssh -i ~/.ssh/id_rsa -p 8022 termux@droid0"
 # alias sshrsa="ssh -N -f -q shellrsa; ssh phua-66004"
+
+alias torfox="$HOME/local/tor-browser_en-US/Browser/start-tor-browser --detach"
 
 # TODO
 
 alias open="xdg-open"
 
 alias mount="sudo mount"
+# alias mount="mount -t vfat $1 -o uid=$(id -u -n),gid=$(id -g -n) $2"
 alias umount="sudo umount"
 
 alias sshmount="sshfs $USER@aleph0:/mnt/dram $HOME/mnt/aleph0"
@@ -121,10 +128,12 @@ alias sshumount="fusermount -u $HOME/mnt/aleph0"
 # alias record="growisofs -Z /dev/sr0 -r -J -allow-limited-size"
 alias isotocd="cdrecord -v dev=/dev/sr0"
 alias isotodvd="growisofs -dvd-compat -Z /dev/sr0="
+alias handbrake="ghb"
 
 # alias mplayer="mpv"
 alias amplayer="mplayer -vo caca"
 alias cmplayer="mplayer -cache 204800 -idx -sws 0 -zoom -fs"
+alias emplayer="mplayer -alang eng -slang eng"
 alias cdplayer="mplayer -cdrom-device /dev/sr0 cdda://"
 alias dvdplayer="mplayer dvd://1 -dvd-device /dev/sr0"
 
@@ -132,6 +141,8 @@ alias ncplayer="nc $HOSTNAME 8080 | mplayer -cache 204800 -idx -"
 ncstreamer() { cat $1 | nc -l -p 8080; }
 
 alias castnow="node $HOME/workspaces/forks/castnow/index.js"
+
+alias wbez="rtl_fm -f 91.5e6 -M wbfm -s 240k -r 44.1k - | aplay -r 44100 -f S16_LE -t raw"
 
 alias fics="xboard -ics -icshost freechess.org"
 alias chess="xboard -fcp /usr/bin/gnuchess --xboard -fd /usr/local/bin -scp /usr/local/bin/gnuchess --xboard -sd /usr/local/bin"

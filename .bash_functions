@@ -2,6 +2,11 @@
 
 # $ declare -[Ff]
 
+# $ time_t timestamp
+function time_t() {
+    date +"%Y-%m-%d %H:%M:%S.%N" -d @${1}
+}
+
 # $ nohupify pid
 # function nohupify() {
 #     kill -s SIGTSTP $1
@@ -14,7 +19,7 @@ function backup() {
     cp $1{,.backup}
 }
 
-# $ recover [/path/to/]file
+# $ recover /path/to/file
 function recover() {
     FILE=/proc/$(lsof | grep $1 | awk '{ print $2 }' | uniq)/fd
     FILE=$FILE/$(ls -l $FILE | grep $1 | awk '{ print $(NF-2) }')
@@ -27,17 +32,8 @@ function google() {
     # elinks https://duckduckgo.com/?q=$(echo \!g $@ | sed 's/\ /+/g')
 }
 
-function torfox() {
-    $HOME/local/tor-browser_en-US/Browser/start-tor-browser --detach
-}
-
 # $ xkcd [id]
 function xkcd() {
-    # IMG=($(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | awk -F \" '/<img src=".*" title=".*" alt=".*" \/>/ { OFS=","; print $2, $4 }'))
-    #
-    # feh http:${IMG[0]}
-    # echo ${IMG[1]} | recode HTML
-
     IMG=$(curl -s https://xkcd.com/$1/ | grep -A1 '<div id="comic">' | grep "<img")
     LINT="xmllint --xpath \"/img/@%s\" - <<<\$IMG | awk -F \\\\\" '{ print \$2 }'"
     SRC=http:$(eval `printf "$LINT" "src"`)
@@ -49,6 +45,7 @@ function xkcd() {
 }
 
 # TODO .gitconfig
+# git fetch && git merge FETCH_HEAD
 function git_rebase_upstream_master() {
     CURRENT_BRANCH=$(git branch | grep '^* ' | awk '{ print $2 }')
 
@@ -64,13 +61,15 @@ function git_rebase_upstream_master() {
 
     git stash pop
 
-    ctags -e -R .
+    # ctags -e -R .
     # CWD=$(realpath .) (cd / && find $CWD -name "*.java" > $CWD/cscope.files) ; cscope -b -q
     gtags
     mkid
+
+    # make || ant
 }
 
-# $ jstackp process
+# $ jstackp pname
 function jstackp() {
     jstack $(jps | grep $1 | awk '{ print $1 }')
 }
@@ -88,11 +87,26 @@ function cfrjar() {
     PATHNAME=${FILENAME%.*}
 
     cd $DIRNAME && mkdir $PATHNAME && cd $PATHNAME
-    jar xf ../$BASENAME
+    jar xf ../$FILENAME
     cfrdir .
 }
 
 # TODO
+
+function man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+                   LESS_TERMCAP_me=$'\e[0m' \
+                   LESS_TERMCAP_se=$'\e[0m' \
+                   LESS_TERMCAP_so=$'\e[01;44;33m' \
+                   LESS_TERMCAP_ue=$'\e[0m' \
+                   LESS_TERMCAP_us=$'\e[01;32m' \
+                   command man "$@"
+}
+
+function trim() {
+    if [ $# -eq 0 ]; then X=16; else X=$1; fi
+    awk "{ print substr(\$1, 0, $X) }"
+}
 
 function review() {
     (head ; tail) <$1

@@ -54,7 +54,7 @@ export LESSGLOBALTAGS=global
 # export LIBRARY_PATH=$HOME/local/lib
 export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
 
-# export CLASSPATH=$(find $HOME/local/jars/ -type f -name "*.jar" -printf "%p:\n" | sort -u | tr -d '\n')$CLASSPATH
+# export CLASSPATH=$(find $HOME/local/jars/ -name "*.jar" -printf "%p:")$CLASSPATH
 
 export PYTHONPATH=$HOME/local/lib/python2.7/site-packages:/usr/lib/python2.7/site-packages
 
