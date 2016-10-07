@@ -1,12 +1,12 @@
 # vim:filetype=config:tw=80:et
-# 
+#
 # This is sample ~/.stalonetrayrc, resembling default configuration.
 # Remember: command line parameters take precedence.
 #
 # Directives introduced in 0.8 are marked with "NEW in 0.8"
 #
 ####################################################################
-# 
+#
 # stalonetray understands following directives
 #
 ####################################################################
@@ -35,6 +35,7 @@ fuzzy_edges 0
 # geometry <geometry>        # tray's geometry in standard X notation; width and
                              # height are specified in slot_size multiples
 geometry 6x1+1294+877
+# geometry 8x1+1727+1057
 
 # grow_gravity <gravity>     # one of N, S, E, W, NW, NE, SW, SE; tray will grow
                              # in the direction opposite to one specified by
@@ -74,7 +75,7 @@ max_geometry 0x0
 # no_shrink [<bool>]         # disables shrink-back mode
 no_shrink false
 
-# parent_bg [<bool>]         # whether to use pseudo-transparency 
+# parent_bg [<bool>]         # whether to use pseudo-transparency
                              # (looks better when reparented into smth like FvwmButtons)
 parent_bg false
 
@@ -134,4 +135,3 @@ window_type dock
 
 # xsync [<bool>]             # whether to operate on X server synchronously (SLOOOOW)
 xsync false
-

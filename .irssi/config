@@ -112,7 +112,7 @@ chatnets = {
   };
   BitlBee = {
     type = "IRC";
-    autosendcmd = "wait 2000; /^msg &bitlbee identify PASSWORD; /away zZzZ";
+    # autosendcmd = "wait 2000; /^msg &bitlbee identify PASSWORD; /away zZzZ";
   };
 };
 
@@ -283,6 +283,9 @@ aliases = {
   97 = "WINDOW GOTO 97";
   98 = "WINDOW GOTO 98";
   99 = "WINDOW GOTO 99";
+  # SE = "SCRIPT EXEC use Irssi (@Irssi::EXPORT_OK)\; $0-"
+  # SEP = "SCRIPT EXEC -permanent use Irssi (@Irssi::EXPORT_OK)\; $0-"
+  # DUMP = "SCRIPT EXEC USE Data::Dumper\; print Data::Dumper->new([\$0-])->Dump"
 };
 
 statusbar = {
@@ -382,6 +385,8 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Unknown"; user_name = "Unknown"; nick = "Unknown"; };
+  # core = { real_name = "Unknown"; user_name = "Unknown"; nick = "Unknown"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { bell_beeps = "yes"; };
 };
+logs = { };
