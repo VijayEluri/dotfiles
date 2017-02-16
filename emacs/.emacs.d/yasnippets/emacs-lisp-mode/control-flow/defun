@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: (defun ...)
+# key: defun
+# group: control-flow
+# contributor: phua
+# --
+(defun $1 ($2)
+  $0)

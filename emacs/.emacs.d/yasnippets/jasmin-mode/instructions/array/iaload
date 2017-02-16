@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: iaload
+# key: iaload
+# group: instructions
+# contributor: phua
+# --
+aload ${1:arrayref}
+iload ${2:index}
+iaload
+$0

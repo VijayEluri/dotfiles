@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (put ...)
+# key: put
+# group: symbols
+# contributor: phua
+# --
+(put $1 ${2:K} ${3:V})

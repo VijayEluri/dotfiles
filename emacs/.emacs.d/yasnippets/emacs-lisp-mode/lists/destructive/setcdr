@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (setcdr ...)
+# key: setcdr
+# group: lists.destructive
+# contributor: phua
+# --
+(setcdr $0)

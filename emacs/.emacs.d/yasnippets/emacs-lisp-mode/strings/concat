@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (concat ...)
+# key: concat
+# group: strings
+# contributor: phua
+# --
+(concat $1)

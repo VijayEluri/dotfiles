@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: assert ... : ...;
+# key: assert
+# group: keywords
+# contributor: phua
+# --
+assert $1${2: :};

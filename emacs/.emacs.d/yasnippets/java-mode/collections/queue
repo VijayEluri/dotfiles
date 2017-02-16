@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: final Queue<E> queue = new ...
+# key: queue
+# group: collections
+# contributor: phua
+# --
+final Queue<${1:Object}> ${queue} = new ${$$(yas-choose-value '("LinkedList" "PriorityQueue"))}<$1>();

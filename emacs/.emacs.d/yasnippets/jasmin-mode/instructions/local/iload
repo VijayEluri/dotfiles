@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: iload
+# key: iload
+# group: instructions
+# contributor: phua
+# --
+iload ${1:index}

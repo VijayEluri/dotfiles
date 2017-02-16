@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fload
+# key: fload
+# group: instructions
+# contributor: phua
+# --
+fload ${1:index}

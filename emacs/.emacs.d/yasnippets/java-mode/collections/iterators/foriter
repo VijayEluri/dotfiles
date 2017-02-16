@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: for (final Iterator<E> iter = c.iterator(); iter.hasNext();) { ... }
+# key: foriter
+# group: collections.iterators
+# contributor: phua
+# --
+for (final Iterator<${1:E}> iter = ${2:es}.iterator(); iter.hasNext();) {
+    final $1 ${3:$2$$(substring yas-text 0 -1)} = iter.next();
+    $0
+}

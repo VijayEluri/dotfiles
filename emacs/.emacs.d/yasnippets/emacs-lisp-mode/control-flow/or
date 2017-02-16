@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (or ...)
+# key: or
+# group: control-flow
+# contributor: phua
+# --
+(or $0)

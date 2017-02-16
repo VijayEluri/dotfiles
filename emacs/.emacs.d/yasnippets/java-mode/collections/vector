@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: final Vector<E> vector = new ...
+# key: vector
+# group: collections
+# contributor: phua
+# --
+final Vector<${1:Object}> ${vector} = new Vector<$1>();

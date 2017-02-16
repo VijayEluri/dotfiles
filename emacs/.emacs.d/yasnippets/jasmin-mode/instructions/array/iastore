@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: iastore
+# key: iastore
+# group: instructions
+# contributor: phua
+# --
+aload ${1:arrayref}
+iload ${2:index}
+iload ${3:value}
+iastore
+$0

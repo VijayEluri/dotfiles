@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: public final class ... { ... }
+# key: class
+# group: data-types
+# contributor: phua
+# --
+public final class ${1:`(file-name-sans-extension (file-relative-name (buffer-file-name) "."))`} {
+    public $1($2) {
+        $0
+    }
+}

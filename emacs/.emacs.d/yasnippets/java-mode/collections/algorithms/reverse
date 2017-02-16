@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Collections.reverse(List<?> list);
+# key: reverse
+# group: collections.algorithms
+# contributor: phua
+# --
+Collections.reverse(${list});

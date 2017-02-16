@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: synchronized (...) { ... }
+# key: synchronized
+# group: concurrent
+# contributor: phua
+# --
+synchronized ($1) {
+    $0
+}

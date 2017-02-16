@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: package ...
+# key: package
+# group: keywords
+# contributor: phua
+# --
+package ${1:P};

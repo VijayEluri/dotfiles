@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (rplaca ...)
+# key: rplaca
+# group: lists.destructive
+# contributor: phua
+# --
+(rplaca $0)

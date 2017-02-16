@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (not ...)
+# key: not
+# group: control-flow
+# contributor: phua
+# --
+(not $0)

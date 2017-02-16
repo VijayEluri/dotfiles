@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: PrintStream
+# key: PrintStream
+# group: types
+# contributor: phua
+# --
+Ljava/io/PrintStream;

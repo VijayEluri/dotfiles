@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ifgt
+# key: ifgt
+# group: instructions
+# contributor: phua
+# --
+ifgt ${1:branch}

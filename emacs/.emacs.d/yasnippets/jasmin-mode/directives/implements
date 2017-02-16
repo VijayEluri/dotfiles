@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .implements
+# key: .implements
+# group: directives
+# contributor: phua
+# --
+.implements ${1:I}

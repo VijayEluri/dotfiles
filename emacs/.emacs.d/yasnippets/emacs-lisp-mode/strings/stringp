@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (stringp ...)
+# key: stringp
+# group: strings
+# contributor: phua
+# --
+(stringp $1)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .signature
+# key: .signature
+# group: directives
+# contributor: phua
+# --
+.signature "${1:signature}"

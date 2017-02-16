@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ret
+# key: ret
+# group: instructions
+# contributor: phua
+# --
+ret ${1:index}

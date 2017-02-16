@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: public final class ... { ... }
+# key: singleton
+# group: design-patterns
+# contributor: phua
+# --
+public final class ${1:S} {
+    private static final $1 instance;
+
+    private $1($2) {
+        $0
+    }
+
+    public static $1 getInstance() {
+        return instance;
+    }
+}

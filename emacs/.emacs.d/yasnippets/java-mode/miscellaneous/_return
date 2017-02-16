@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: return ...
+# key: return
+# group: keywords
+# contributor: phua
+# --
+return $1;

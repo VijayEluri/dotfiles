@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .interface
+# key: .interface
+# group: directives
+# contributor: phua
+# --
+.interface public ${1:I}

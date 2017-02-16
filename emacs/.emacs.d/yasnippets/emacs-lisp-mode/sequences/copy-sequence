@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (copy-sequence ...)
+# key: copy-sequence
+# group: sequences
+# contributor: phua
+# --
+(copy-sequence $1)

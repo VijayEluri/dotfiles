@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: @Override public int hashCode() { ... }
+# key: hashCode
+# group: methods
+# contributor: phua
+# --
+@Override
+public int hashCode() {
+    return ${1:42};
+}

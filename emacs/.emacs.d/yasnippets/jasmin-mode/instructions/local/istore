@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: istore
+# key: istore
+# group: instructions
+# contributor: phua
+# --
+istore ${1:index}

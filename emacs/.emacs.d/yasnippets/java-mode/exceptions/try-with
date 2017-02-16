@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: try (...) { ... }
+# key: try-with
+# group: exceptions
+# contributor: phua
+# --
+try (${1:AutoClosable}) {
+    $0
+}

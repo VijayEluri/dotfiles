@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (cdr ...)
+# key: cdr
+# group: lists
+# contributor: phua
+# --
+(cdr $1)

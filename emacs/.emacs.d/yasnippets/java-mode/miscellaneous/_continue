@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: continue ...;
+# key: continue
+# group: keywords
+# contributor: phua
+# --
+continue${1: label};

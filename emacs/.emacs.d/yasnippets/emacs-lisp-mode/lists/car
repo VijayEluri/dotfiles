@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (car ...)
+# key: car
+# group: lists
+# contributor: phua
+# --
+(car $1)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Collections.binarySearch(List<? extends Comparable<? super T>> list, T key);
+# key: binarySearch
+# group: collections.algorithms
+# contributor: phua
+# --
+Collections.binarySearch(${list}, ${key});

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: instanceof
+# key: instanceof
+# group: instructions
+# contributor: phua
+# --
+instanceof ${1:C}

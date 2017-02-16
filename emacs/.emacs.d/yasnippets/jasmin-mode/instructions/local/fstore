@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fstore
+# key: fstore
+# group: instructions
+# contributor: phua
+# --
+fstore ${1:index}

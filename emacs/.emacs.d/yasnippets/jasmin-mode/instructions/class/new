@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: new
+# key: new
+# group: instructions
+# contributor: phua
+# --
+new ${1:C}
+dup
+invokespecial $1/<init>()V
+astore ${2}

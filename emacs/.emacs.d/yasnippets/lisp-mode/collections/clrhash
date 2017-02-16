@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (clrhash ...)
+# key: clrhash
+# group: collections
+# contributor: phua
+# --
+(clrhash ${1:hash-table})

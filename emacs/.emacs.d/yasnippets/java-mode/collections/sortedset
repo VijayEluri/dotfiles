@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: final SortedSet<E> set = new ...
+# key: sortedset
+# group: collections
+# contributor: phua
+# --
+final SortedSet<${1:Object}> ${set} = new ${TreeSet}<$1>();

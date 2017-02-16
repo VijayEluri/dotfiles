@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: lookupswitch
+# key: lookupswitch
+# group: instructions
+# contributor: phua
+# --
+lookupswitch
+    ${1:0}  : ${2:Label0}
+    $0
+    default : ${3:LabelN}
+
+$2 :
+
+$3 :

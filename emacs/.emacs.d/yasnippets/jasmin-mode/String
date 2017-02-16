@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: String
+# key: String
+# group: types
+# contributor: phua
+# --
+Ljava/lang/String;

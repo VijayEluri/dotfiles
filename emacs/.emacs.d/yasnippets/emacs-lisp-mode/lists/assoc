@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (assoc ...)
+# key: assoc
+# group: lists
+# contributor: phua
+# --
+(assoc ${1:S} ((${2:K} . ${3:V})))

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: (lambda ...)
+# key: lambda
+# group: control-flow
+# contributor: phua
+# --
+(lambda ($1)
+  $0)

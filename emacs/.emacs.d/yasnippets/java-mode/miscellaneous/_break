@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: break ...;
+# key: break
+# group: keywords
+# contributor: phua
+# --
+break ${1: :};

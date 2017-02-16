@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: lstore
+# key: lstore
+# group: instructions
+# contributor: phua
+# --
+lstore ${1:index}

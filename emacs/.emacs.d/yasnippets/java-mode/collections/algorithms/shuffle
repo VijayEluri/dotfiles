@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Collections.shuffle(List<?> list);
+# key: shuffle
+# group: collections.algorithms
+# contributor: phua
+# --
+Collections.shuffle(${list});

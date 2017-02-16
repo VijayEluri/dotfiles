@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .catch
+# key: .catch
+# group: directives
+# contributor: phua
+# --
+.catch ${1:java/lang/Exception} from ${2:Label1} to ${3:Label2} using ${4:Label3}

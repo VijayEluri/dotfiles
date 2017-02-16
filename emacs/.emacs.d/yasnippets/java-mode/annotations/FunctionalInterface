@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: @FunctionalInterface
+# key: @FunctionalInterface
+# group: annotations
+# contributor: phua
+# --
+@FunctionalInterface

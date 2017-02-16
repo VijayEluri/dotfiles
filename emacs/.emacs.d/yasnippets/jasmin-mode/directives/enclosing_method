@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .enclosing_method
+# key: .enclosing_method
+# group: directives
+# contributor: phua
+# --
+.enclosing_method ${1:method-name}()

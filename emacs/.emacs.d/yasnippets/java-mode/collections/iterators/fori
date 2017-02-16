@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: for (int i = 0; i < c.size(); i++) { ... }
+# key: fori
+# group: collections.iterators
+# contributor: phua
+# --
+for (int ${1:i} = 0; $1 < ${2:es}.size(); $1++) {
+    final ${3:E} ${4:$2$$(substring yas-text 0 -1)} = $2.get($1);
+    $0
+}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (length ...)
+# key: length
+# group: sequences
+# contributor: phua
+# --
+(length $1)

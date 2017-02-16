@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .super
+# key: .super
+# group: directives
+# contributor: phua
+# --
+.super ${1:java/lang/Object}

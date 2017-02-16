@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .bytecode
+# key: .bytecode
+# group: directives
+# contributor: phua
+# --
+.bytecode ${1:52.0}

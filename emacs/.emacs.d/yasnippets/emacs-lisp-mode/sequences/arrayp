@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (arrayp ...)
+# key: arrayp
+# group: sequences
+# contributor: phua
+# --
+(arrayp $1)

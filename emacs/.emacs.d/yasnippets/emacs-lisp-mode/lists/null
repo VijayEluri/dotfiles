@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: (null ...)
+# key: null
+# group: lists
+# contributor: phua
+# --
+(null $1)

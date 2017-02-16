@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: class ... implements Runnable { ... }
+# key: defrunnable
+# group: concurrent
+# contributor: phua
+# --
+public final class ${1:R} implements Runnable {
+    public $1($2) {
+        $0
+    }
+
+    @Overrides
+    public void run() {
+
+    }
+}

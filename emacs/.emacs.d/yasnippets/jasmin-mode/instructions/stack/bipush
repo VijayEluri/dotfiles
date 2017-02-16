@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bipush
+# key: bipush
+# group: instructions
+# contributor: phua
+# --
+bipush ${1:byte}

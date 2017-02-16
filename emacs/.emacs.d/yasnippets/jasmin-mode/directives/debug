@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: .debug
+# key: .debug
+# group: directives
+# contributor: phua
+# --
+.debug "${1:source-debug-extension}"

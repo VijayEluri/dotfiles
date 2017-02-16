@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: anewarray
+# key: anewarray
+# group: instructions
+# contributor: phua
+# --
+ldc ${2:count}
+anewarray ${1:C}
+$0
