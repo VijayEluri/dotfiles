@@ -1,0 +1,18 @@
+auto-reload yes
+bind-key j down
+bind-key k up
+bind-key g pageup
+bind-key G pagedown
+# bookmark-cmd ""
+browser w3m
+confirm-exit yes
+external-url-viewer urlview
+html-renderer "/usr/bin/w3m -I %{charset} -T text/html -dump; copiousoutput"
+keep-articles-days 30
+notify-screen yes
+# opml-url file:///
+refresh-on-startup yes
+reload-time 480
+save-path "~/.newsbeuter/saved"
+# urls-source "opml"
+user-agent "Googlebot/2.1; +http://www.google.com/bot.html)"
