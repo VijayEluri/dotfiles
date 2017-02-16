@@ -1,0 +1,12 @@
+# $ ./eclimd -f ~/.eclimrc
+
+# nailgun.server.host=0.0.0.0
+# nailgun.server.port=10012
+
+# $ECLIPSE_HOME/configuration/config.ini
+osgi.instance.area.default=@user.home/workspaces/java
+
+# -Xmx256m
+
+# -XX:PermSize=64m
+# -XX:MaxPermSize=128m
