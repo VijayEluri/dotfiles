@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (maphash ...)
-# key: maphash
-# group: collections
-# contributor: phua
-# --
-(maphash ${1:function} ${2:hash-table})

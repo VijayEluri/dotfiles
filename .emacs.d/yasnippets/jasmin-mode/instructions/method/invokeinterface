@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: invokeinterface
-# key: invokeinterface
-# group: instructions
-# contributor: phua
-# --
-invokeinterface ${1:class}/${2:method}(${3:descriptor})${4:V} ${5:count}

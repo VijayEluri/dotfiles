@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: .field
-# key: .field
-# group: directives
-# contributor: phua
-# --
-.field ${1:$$(yas-choose-value '("public" "protected" "private" ""))} ${2:field-name} ${3:descriptor} ${4:= value}

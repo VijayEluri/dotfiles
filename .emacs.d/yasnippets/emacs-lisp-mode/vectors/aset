@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (aset ...)
-# key: aset
-# group: vectors
-# contributor: phua
-# --
-(aset ${1:vec} ${2:i} $0)

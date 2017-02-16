@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: (progn ...)
-# key: progn
-# group: control-flow
-# contributor: phua
-# --
-(progn
-  $0)

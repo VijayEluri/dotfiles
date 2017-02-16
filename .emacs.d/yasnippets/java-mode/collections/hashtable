@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: final Hashtable<K, V> hashtable = new ...
-# key: hashtable
-# group: collections
-# contributor: phua
-# --
-final Hashtable<${1:Object}, ${2:Object}> ${hashtable} = new Hashtable<$1, $2>();

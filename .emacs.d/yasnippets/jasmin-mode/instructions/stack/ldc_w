@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: ldc_w
-# key: ldc_w
-# group: instructions
-# contributor: phua
-# --
-ldc_w ${1:index}

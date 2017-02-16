@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: final Set<E> set = new ...
-# key: set
-# group: collections
-# contributor: phua
-# --
-final Set<${1:Object}> ${set} = new ${$$(yas-choose-value '("HashSet" "TreeSet" "LinkedHashSet"))}<$1>();

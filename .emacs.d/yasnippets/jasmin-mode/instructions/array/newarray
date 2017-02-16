@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: newarray
-# key: newarray
-# group: instructions
-# contributor: phua
-# --
-ldc ${2:count}
-newarray ${1:$$(yas-choose-value '("boolean" "char" "float" "double" "byte" "short" "int" "long"))}
-$0

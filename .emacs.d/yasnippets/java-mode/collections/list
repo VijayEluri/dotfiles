@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: final List<E> list = new ...
-# key: list
-# group: collections
-# contributor: phua
-# --
-final List<${1:Object}> ${list} = new ${$$(yas-choose-value '("ArrayList" "LinkedList" "Vector"))}<$1>();

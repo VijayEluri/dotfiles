@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: @SafeVarargs
-# key: @SafeVarargs
-# group: annotations
-# contributor: phua
-# --
-@SafeVarargs

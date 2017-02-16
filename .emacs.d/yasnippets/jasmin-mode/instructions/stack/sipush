@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: sipush
-# key: sipush
-# group: instructions
-# contributor: phua
-# --
-sipush ${1:short}

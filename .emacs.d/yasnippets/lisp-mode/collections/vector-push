@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (vector-push ...)
-# key: vector-push
-# group: collections
-# contributor: phua
-# --
-(vector-push ${1:new-element} ${2:vector})

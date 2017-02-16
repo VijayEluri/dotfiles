@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: ifnonnull
-# key: ifnonnull
-# group: instructions
-# contributor: phua
-# --
-ifnonnull ${1:branch}

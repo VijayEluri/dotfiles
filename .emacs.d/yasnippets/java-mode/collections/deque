@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: final Deque<E> deque = new ...
-# key: deque
-# group: collections
-# contributor: phua
-# --
-final Deque<${1:Object}> ${deque} = new ${$$(yas-choose-value '("ArrayDeque" "LinkedList"))}<$1>();

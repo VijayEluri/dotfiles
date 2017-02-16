@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (nthcdr ...)
-# key: nthcdr
-# group: lists
-# contributor: phua
-# --
-(nthcdr ${1:i} ${2:lst})

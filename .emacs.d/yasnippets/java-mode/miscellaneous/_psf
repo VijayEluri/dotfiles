@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: public static final ...
-# key: psf
-# contributor: phua
-# --
-public static final ${1:Object} ${2:o} = $0;

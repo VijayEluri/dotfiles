@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: public T getField() { ... }
-# key: getter
-# group: methods
-# contributor: phua
-# --
-public ${1:T} get${2:Field}() {
-    return this.${3:$2$(concat (downcase (substring yas-text 0 1)) (substring yas-text 1))};
-}

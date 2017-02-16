@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: System.err.println(...);
-# key: syserr
-# contributor: phua
-# --
-System.err.println("$1");

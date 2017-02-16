@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (integerp ...)
-# key: intergerp
-# group: numbers
-# contributor: phua
-# --
-(integerp $1)

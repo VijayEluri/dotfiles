@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length);
-# key: arraycopy
-# group: collections.algorithms
-# contributor: phua
-# --
-System.arraycopy(${src}, ${srcPos}, ${dest}, ${destPos}, ${length});

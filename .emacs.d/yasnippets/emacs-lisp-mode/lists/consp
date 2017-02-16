@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (consp ...)
-# key: consp
-# group: lists
-# contributor: phua
-# --
-(consp $1)

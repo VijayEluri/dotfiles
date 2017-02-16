@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (string= ...)
-# key: string=
-# group: strings
-# contributor: phua
-# --
-(string= $1 $2)

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (get ...)
-# key: get
-# group: symbols
-# contributor: phua
-# --
-(get $1 ${2:K})

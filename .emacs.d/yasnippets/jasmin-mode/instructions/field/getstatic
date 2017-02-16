@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: getstatic
-# key: getstatic
-# group: instructions
-# contributor: phua
-# --
-getstatic ${1:class}/${2:field} ${3:descriptor}

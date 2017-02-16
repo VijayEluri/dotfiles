@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (atomp ...)
-# key: atomp
-# group: lists
-# contributor: phua
-# --
-(atomp $1)

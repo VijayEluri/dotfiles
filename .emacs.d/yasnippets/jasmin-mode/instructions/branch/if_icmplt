@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: if_icmplt
-# key: if_icmplt
-# group: instructions
-# contributor: phua
-# --
-if_icmplt ${1:branch}

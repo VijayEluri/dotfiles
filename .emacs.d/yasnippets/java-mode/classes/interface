@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: public interface ... { ... }
-# key: interface
-# group: data-types
-# contributor: phua
-# --
-public interface ${1:`(file-name-sans-extension (file-relative-name (buffer-file-name) "."))`} {
-    $0
-}

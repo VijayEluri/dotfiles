@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (nconc ...)
-# key: nconc
-# group: lists.destructive
-# contributor: phua
-# --
-(nconc $0)

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (setcar ...)
-# key: setcar
-# group: lists.destructive
-# contributor: phua
-# --
-(setcar $0)

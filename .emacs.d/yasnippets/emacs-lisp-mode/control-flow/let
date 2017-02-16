@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: (let ...)
-# key: let
-# group: control-flow
-# contributor: phua
-# --
-(let (($1 $2))
-  $0)

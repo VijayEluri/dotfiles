@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (string-lessp ...)
-# key: string-lessp
-# group: strings
-# contributor: phua
-# --
-(string-lessp $1 $2)

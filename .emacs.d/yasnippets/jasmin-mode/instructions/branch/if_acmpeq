@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: if_acmpeq
-# key: if_acmpeq
-# group: instructions
-# contributor: phua
-# --
-if_acmpeq ${1:branch}

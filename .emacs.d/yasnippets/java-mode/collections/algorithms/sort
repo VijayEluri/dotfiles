@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: Collections.sort(List<?> list);
-# key: sort
-# group: collections.algorithms
-# contributor: phua
-# --
-Collections.sort(${list});

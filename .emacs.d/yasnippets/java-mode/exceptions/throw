@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: throw new ...;
-# key: throw
-# group: exceptions
-# contributor: phua
-# --
-throw new ${1:Exception}($2);

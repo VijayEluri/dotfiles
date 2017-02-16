@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: .end
-# key: .end
-# group: directives
-# contributor: phua
-# --
-.end ${1:$$(yas-choose-value '("class" "field" "method"))}

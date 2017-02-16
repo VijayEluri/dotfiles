@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (cond ...)
-# key: cond
-# group: control-flow
-# contributor: phua
-# --
-(cond (($1 $2)))

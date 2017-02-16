@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: jsr_w
-# key: jsr_w
-# group: instructions
-# contributor: phua
-# --
-jsr_w ${1:branch}

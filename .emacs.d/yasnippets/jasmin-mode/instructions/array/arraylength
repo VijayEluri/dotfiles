@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: arraylength
-# key: arraylength
-# group: instructions
-# contributor: phua
-# --
-aload ${1:arrayref}
-arraylength
-$0

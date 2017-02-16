@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: goto
-# key: goto
-# group: instructions
-# contributor: phua
-# --
-goto ${1:branch}

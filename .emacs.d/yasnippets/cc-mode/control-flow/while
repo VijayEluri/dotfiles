@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: while (...) { ... }
-# key: while
-# group: control-flow
-# contributor: phua
-# --
-while ($1) {
-    $0
-}

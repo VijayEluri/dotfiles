@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (and ...)
-# key: and
-# group: control-flow
-# contributor: phua
-# --
-(and $0)

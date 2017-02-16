@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (symbolp ...)
-# key: symbolp
-# group: symbols
-# contributor: phua
-# --
-(symbolp $1)

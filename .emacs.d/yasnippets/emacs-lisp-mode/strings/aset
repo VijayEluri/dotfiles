@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (aset ...)
-# key: aset
-# group: strings
-# contributor: phua
-# --
-(aset ${1:string} ${2:index} ${3:char})

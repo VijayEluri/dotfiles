@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (char-equal ...)
-# key: char-equal
-# group: characters
-# contributor: phua
-# --
-(char-equal $1 $2)

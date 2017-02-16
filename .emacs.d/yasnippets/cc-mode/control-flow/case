@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: case ...: break;
-# key: case
-# group: control-flow
-# contributor: phua
-# --
-case $1:
-    $0
-    break;

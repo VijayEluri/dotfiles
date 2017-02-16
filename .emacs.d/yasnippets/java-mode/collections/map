@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: final Map<K, V> map = new ...
-# key: map
-# group: collections
-# contributor: phua
-# --
-final Map<${1:Object}, ${2:Object}> ${map} = new ${$$(yas-choose-value '("HashMap" "TreeMap" "LinkedHashMap" "Hashtable"))}<$1, $2>();

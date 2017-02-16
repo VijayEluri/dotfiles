@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: ifle
-# key: ifle
-# group: instructions
-# contributor: phua
-# --
-ifle ${1:branch}

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (assq ...)
-# key: assq
-# group: lists
-# contributor: phua
-# --
-(assq ${1:S} ((${2:K} . ${3:V})))

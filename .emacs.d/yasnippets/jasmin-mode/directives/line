@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: .line
-# key: .line
-# group: directives
-# contributor: phua
-# --
-.line ${1:1}

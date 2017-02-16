@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (char-to-string ...)
-# key: char-to-string
-# group: characters
-# contributor: phua
-# --
-(char-to-string $1)

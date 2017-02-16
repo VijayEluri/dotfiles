@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: Collections.fill(List<? super T> list, T obj);
-# key: fill
-# group: collections.algorithms
-# contributor: phua
-# --
-Collections.fill(${list}, ${obj});

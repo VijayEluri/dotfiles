@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: checkcast
-# key: checkcast
-# group: instructions
-# contributor: phua
-# --
-checkcast ${1:C}

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: Collections.copy(List<? super T> dest, List<? extends T> src);
-# key: copy
-# group: collections.algorithms
-# contributor: phua
-# --
-Collections.copy(${dest}, ${src});

@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: (defmacro ...)
-# key: defmacro
-# group: control-flow
-# contributor: phua
-# --
-(defmacro ($1)
-  $0)

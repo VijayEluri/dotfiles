@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: putfield
-# key: putfield
-# group: instructions
-# contributor: phua
-# --
-putfield ${1:class}/${2:field} ${3:descriptor}

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (sequencep ...)
-# key: sequencep
-# group: sequences
-# contributor: phua
-# --
-(sequencep $1)

@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: else { ... }
-# key: else
-# group: control-flow
-# contributor: phua
-# --
-else {
-    $0
-}

@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: new ...
-# key: new
-# group: data-types
-# contributor: phua
-# --
-final ${1:Object} ${2:o} = new $1($3);

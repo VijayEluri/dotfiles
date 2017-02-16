@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: extends ...
-# key: extends
-# group: keywords
-# contributor: phua
-# --
-extends ${1:Object}

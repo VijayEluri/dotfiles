@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: (inter ...)
-# key: intern
-# group: symbols
-# contributor: phua
-# --
-(intern ${1:S})
