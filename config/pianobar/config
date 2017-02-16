@@ -1,2 +1,2 @@
-user = $USER
+user = /usr/bin/gpg --decrypt $HOME/.config/pianobar/username.gpg
 password_command = /usr/bin/gpg --decrypt $HOME/.config/pianobar/password.gpg
