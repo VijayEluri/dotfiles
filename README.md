@@ -35,7 +35,7 @@ Create new repository...
 
 ...or clone existing repository.
 
-`git clone git@github.com:$USER/$REPOSITORY.git` $REPOSITORY
+`git clone git@github.com:$USER/$REPOSITORY.git $REPOSITORY`
 
 Rebase from upstream/master...
 
