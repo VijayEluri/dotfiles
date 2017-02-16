@@ -1,5 +1,3 @@
-[Markdown](https://daringfireball.net/projects/markdown/)
-
 ## Installation
 
 `$ git clone https://github.com/phua/dotfiles.git /path/to/dotfiles`  
@@ -85,3 +83,10 @@ Other...
 Purging...
 
 `find . -type d -name ".svn" -exec git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch {}' --force HEAD \;`
+
+## References
+
+* [Markdown](https://daringfireball.net/projects/markdown/)
+* [GNU Stow](https://www.gnu.org/software/stow/manual/)
+* [Git](https://git-scm.com/doc)
+* [GitHub](https://guides.github.com/activities/hello-world/)
