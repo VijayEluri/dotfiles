@@ -1,0 +1,3 @@
+# "\C-w":kill-region
+# "\M-w":copy-region-as-kill
+# "\C-Space":set-mark
