@@ -25,7 +25,7 @@ Create new repository...
 
 `mkdir -p $REPOSITORY && cd $REPOSITORY`  
 `git init`  
-`touch README`  
+`touch README.md`  
 `git commit -a -m 'first commit'`
 
 ...and push repository upstream...
@@ -35,7 +35,7 @@ Create new repository...
 
 ...or clone existing repository.
 
-`git clone git@github.com:$USER/$REPOSITORY.git`
+`git clone git@github.com:$USER/$REPOSITORY.git` $REPOSITORY
 
 Rebase from upstream/master...
 
@@ -46,7 +46,7 @@ or, `git pull --rebase upstream master`
 
 `git push origin master`
 
-## Commands Workflow
+## Git Workflow Commands
 
 Create...
 
@@ -80,7 +80,7 @@ Other...
 
 `git [bisect|fsck|gc|grep]`
 
-gitk, git gui, git instaweb
+`gitk`, `git gui`, `git instaweb`
 
 Purging...
 
