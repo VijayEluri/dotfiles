@@ -1,0 +1,5 @@
+<locatingRules>
+  <uri pattern="build.xml" uri="file://$HOME/workspaces/xml/ant-1.8.rnc" />
+  <uri pattern="pom.xml" uri="file://$HOME/workspaces/xml/maven-v4_0_0.rnc" />
+  <uri pattern="beans.xml" uri="file://$HOME/workspaces/xml/spring-beans-3.0.rnc" />
+</locatingRules>
