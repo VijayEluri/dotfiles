@@ -7,30 +7,30 @@ or, `$ git clone git@github.com:phua/dotfiles.git /path/to/dotfiles`
 
 <strike>`$ ln -sf /path/to/dotfiles{/private,}/{.[!.]*,*} ~`</strike>
 
-`$ stow -d /path/to/stowfiles -t $HOME bash devel emacs media term vim X zsh`  
-`$ stow -d /path/to/stowfiles -t $HOME/.config config`
+`$ stow -d /path/to/dotfiles -t $HOME bash devel emacs media term vim X zsh`  
+`$ stow -d /path/to/dotfiles -t $HOME/.config config`
 
 ## Git Basics
 
 Configure git.
 
-`git config --global user.name phua`
-`git config --global user.email phua@users.noreply.github.com`
+`git config --global user.name phua`  
+`git config --global user.email phua@users.noreply.github.com`  
 `git config --global color.ui auto`
 
-`git config --global sslcainfo ...`
+`git config --global sslcainfo ...`  
 `git config --global autocrlf false`
 
 Create new repository...
 
-`mkdir -p $REPOSITORY && cd $REPOSITORY`
-`git init`
-`touch README`
+`mkdir -p $REPOSITORY && cd $REPOSITORY`  
+`git init`  
+`touch README`  
 `git commit -a -m 'first commit'`
 
 ...and push repository upstream...
 
-`git remote add origin git@github.com:$USER/$REPOSITORY.git`
+`git remote add origin git@github.com:$USER/$REPOSITORY.git`  
 `git push -u origin master`
 
 ...or clone existing repository.
@@ -39,7 +39,7 @@ Create new repository...
 
 Rebase from upstream/master...
 
-`git fetch upstream && git merge upstream/master && git pull upstream master`
+`git fetch upstream && git merge upstream/master && git pull upstream master`  
 or, `git pull --rebase upstream master`
 
 ...and push to origin/master.
