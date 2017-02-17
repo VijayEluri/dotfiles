@@ -13,6 +13,6 @@ notify-screen yes
 # opml-url file:///
 refresh-on-startup yes
 reload-time 480
-save-path "~/.newsbeuter/saved"
+save-path "~/Downloads"
 # urls-source "opml"
 user-agent "Googlebot/2.1; +http://www.google.com/bot.html)"

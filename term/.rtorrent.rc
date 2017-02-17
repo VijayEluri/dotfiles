@@ -3,8 +3,8 @@
 port_range = 6881-6881
 port_random = no
 check_hash = yes
-directory = ~/downloads/torrents/files
-session = ~/downloads/torrents/sessions
+directory = ~/Downloads/torrents/files
+session = ~/Downloads/torrents/sessions
 encryption = allow_incoming,try_outgoing,enable_retry
 peer_exchange = no
 

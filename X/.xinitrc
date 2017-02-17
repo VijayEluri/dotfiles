@@ -15,11 +15,11 @@ fi
 /usr/bin/xrdb -merge ~/.Xresources
 /usr/bin/xsetroot -solid black &
 /bin/sh ~/.fehbg &
-/usr/bin/xscreensaver -no-splash &
+# /usr/bin/xscreensaver -no-splash &
+/usr/bin/xautolock -time 10 -locker slock &
 /usr/bin/xcompmgr -c &
 /usr/bin/stalonetray &
 /usr/bin/xmodmap ~/.Xmodmap &
-# /usr/bin/xautolock -time 10 -locker slock &
 
 # if [ $HOSTNAME == "aleph1" ]
 # then

@@ -3,7 +3,7 @@
 `$ git clone https://github.com/phua/dotfiles.git /path/to/dotfiles`  
 or, `$ git clone git@github.com:phua/dotfiles.git /path/to/dotfiles`
 
-<strike>`$ ln -sf /path/to/dotfiles{/private,}/{.[!.]*,*} ~`</strike>
+<strike>`$ ln -sf /path/to/dotfiles/{.[!.]*,*} ~`</strike>  
 
 `$ stow -d /path/to/dotfiles -t $HOME bash devel emacs media term vim X zsh`  
 `$ stow -d /path/to/dotfiles -t $HOME/.config config`

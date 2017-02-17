@@ -1,4 +1,4 @@
--- $ xmonad --recompile
+-- $ xmonad --recompile, or M-q
 
 import XMonad
 import XMonad.Hooks.DynamicLog
