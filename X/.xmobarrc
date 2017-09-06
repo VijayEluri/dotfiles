@@ -5,7 +5,7 @@ Config {
   position = BottomW L 90,
   lowerOnStart = True,
   commands = [ Run Weather "KMDW" ["-t", "<tempF>F", "-L", "64", "-H", "77", "-l", "blue", "-n", "green", "-h", "red"] 36000,
-               Run Network "wlp3s0" ["-t", "<dev>: <rx>KB/<tx>KB", "-L", "0", "-H", "50", "-l", "green", "-n", "orange", "-h", "red"] 10,
+               Run Network "wlp2s0" ["-t", "<dev>: <rx>KB/<tx>KB", "-L", "0", "-H", "50", "-l", "green", "-n", "orange", "-h", "red"] 10,
                Run Memory ["-t", "Mem: <usedratio>%", "-L", "20", "-H", "80", "-l", "green", "-n", "orange", "-h", "red"] 10,
                Run Swap ["-L", "1", "-H", "5", "-l", "green", "-n", "orange", "-h", "red"] 10,
                Run Cpu ["-L", "5", "-H", "50", "-l", "green", "-n", "orange", "-h", "red"] 10,
@@ -16,5 +16,5 @@ Config {
                Run StdinReader ],
   sepChar = "%",
   alignSep = "}{",
-  template = " %StdinReader% }{ | %cpu% %memory% %swap% %wlp3s0% | <fc=lightblue>%date%</fc> %KMDW% | %thermal0% %battery% "
+  template = " %StdinReader% }{ | %cpu% %memory% %swap% %wlp2s0% | <fc=lightblue>%date%</fc> %KMDW% | %thermal0% %battery% "
   }

@@ -34,8 +34,8 @@ fuzzy_edges 0
 
 # geometry <geometry>        # tray's geometry in standard X notation; width and
                              # height are specified in slot_size multiples
-geometry 6x1+1294+877
-# geometry 8x1+1727+1057
+# geometry 6x1+1294+877
+geometry 8x1+1727+1057
 
 # grow_gravity <gravity>     # one of N, S, E, W, NW, NE, SW, SE; tray will grow
                              # in the direction opposite to one specified by
